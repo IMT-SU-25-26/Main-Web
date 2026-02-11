@@ -1,4 +1,4 @@
-import SignInButton from "@/components/ui/sign-in-button";
+import SignInButton from "@/components/layout/sign-in-button";
 
 export default function HomePage() {
   return (

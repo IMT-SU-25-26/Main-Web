@@ -5,7 +5,7 @@ import { Session } from "@/types/auth";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import SignInButton from "../ui/sign-in-button";
+import SignInButton from "./sign-in-button";
 
 interface MobileMenuProps {
   session: Session | null;
