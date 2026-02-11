@@ -1,9 +1,9 @@
-import { SignIn } from "@/components/layout/sign-in";
+import SignInButton from "@/components/ui/sign-in-button";
 
 export default function HomePage() {
   return (
     <div>
-      <SignIn />
+      <SignInButton />
     </div>
   );
 }
