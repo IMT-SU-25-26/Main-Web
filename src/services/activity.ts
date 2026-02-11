@@ -6,12 +6,20 @@ import { revalidatePath } from "next/cache";
 import { ActivitySchema } from "@/types/db/activity";
 
 export async function getLatestActivities(limit: number = 3) {
-  return await prisma.activity.findMany({
+  const activities = await prisma.activity.findMany({
     orderBy: {
       createdAt: "desc",
     },
     take: limit,
+    include: {
+      images: true,
+    },
   });
+
+  return activities.map((activity) => ({
+    ...activity,
+    startDate: activity.startDate.toISOString(),
+  }));
 }
 
 export async function getAllActivities() {

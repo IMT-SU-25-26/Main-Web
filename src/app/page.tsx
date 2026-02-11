@@ -1,9 +1,9 @@
-import SignInButton from "@/components/layout/sign-in-button";
+import "@/styles/home.css";
+import HomePage from "@/components/pages/home/home";
+import { getLatestActivities } from "@/services/activity";
 
-export default function HomePage() {
-  return (
-    <div>
-      
-    </div>
-  );
+export default async function Home() {
+  const latestActivities = await getLatestActivities();
+
+  return <HomePage latestActivities={latestActivities} />;
 }

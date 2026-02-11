@@ -72,7 +72,7 @@ export default function DesktopMenu({
               {isLoggedIn ? (
                 <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
                   <Image
-                    src={session.user?.image || "/images/navigation/person.png"}
+                    src={session.user?.image || "/images/layout/person.png"}
                     width={40}
                     height={40}
                     alt="Profile Avatar"
@@ -82,7 +82,7 @@ export default function DesktopMenu({
               ) : (
                 <div className="w-full h-full rounded-full flex items-center justify-center overflow-hidden">
                   <Image
-                    src={"/images/navigation/person.png"}
+                    src={"/images/layout/person.png"}
                     width={40}
                     height={40}
                     alt="Guest Avatar"

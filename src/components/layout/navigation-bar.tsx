@@ -36,7 +36,7 @@ export default function NavigationBar() {
         className="w-9.5 sm:w-6 md:w-8 lg:w-9 xl:w-10.5 2xl:w-12 h-auto cursor-pointer"
       >
         <Image
-          src={"/images/navigation/su-logo.svg"}
+          src={"/images/layout/su-logo.svg"}
           width={100}
           height={100}
           alt="su-logo"
