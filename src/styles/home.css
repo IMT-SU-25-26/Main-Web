@@ -1,3 +1,63 @@
+/* Pre Hide Elements */
+.red-bubble,
+.yellow-bubble,
+.front-bubble,
+.stars-left,
+.stars-right,
+.welcome,
+.demon-cat,
+.to-text,
+.su-imt-text,
+.title-background,
+.red-spike-landing,
+.yellow-star-landing,
+.green-spike-landing,
+.green-arrow-landing,
+.among-us,
+.dragon,
+.crown,
+.what-is-su-imt-text,
+.su-imt-description,
+.learn-more-button,
+.laptop-on-stick,
+.camera,
+.book-laptop,
+.competition-text,
+.competition-left-container,
+.competition-right-container,
+.mobile-competition-container,
+.explore-text,
+.home-service-card-left,
+.home-service-card-center,
+.home-service-card-right,
+.explore-button,
+.paper-cloud,
+.red-star-footer-left,
+.green-home-footer-left,
+.yellow-spike-right {
+  opacity: 0;
+}
+
+/* GPU-Accelerated Animation Targets */
+.container-landing,
+.container-landing img,
+.competition-left-container,
+.competition-right-container,
+.home-service-card-left,
+.home-service-card-center,
+.home-service-card-right {
+  will-change: transform, opacity;
+}
+
+/* CSS Hover Transitions */
+.learn-more-button,
+.explore-button {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.learn-more-button:hover,
+.explore-button:hover {
+  transform: scale(1.05);
+}
 @media (max-width: 3840px) and (max-height: 2160px) {
 }
 @media (max-width: 2850px) and (max-height: 1800px) {
@@ -3668,7 +3728,7 @@
   }
 }
 @media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {
-.container-landing {
+  .container-landing {
     margin-top: 10%;
   }
   .yellow-star-landing {
@@ -4549,7 +4609,7 @@
 @media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
 }
 @media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
-   .container-landing {
+  .container-landing {
     margin-top: 10%;
   }
   .yellow-star-landing {
@@ -4711,7 +4771,7 @@
     max-width: 20rem;
     top: -4rem;
   }
-  .image-mobile-container{
+  .image-mobile-container {
     width: 100%;
     height: 10rem;
   }
@@ -4818,11 +4878,11 @@
     top: 4rem;
     right: 0%;
   }
-  .green-home-footer-left{
+  .green-home-footer-left {
     width: 25%;
     top: -4rem;
   }
-  .yellow-spike-right{
+  .yellow-spike-right {
     top: -9rem;
   }
 }
@@ -4989,7 +5049,7 @@
     max-width: 20rem;
     top: -4rem;
   }
-  .image-mobile-container{
+  .image-mobile-container {
     height: 7rem;
   }
   .mobile-competition-content {
@@ -5259,7 +5319,7 @@
     max-width: 20rem;
     top: -4rem;
   }
-  .image-mobile-container{
+  .image-mobile-container {
     height: 7rem;
   }
   .mobile-competition-content {
@@ -6325,7 +6385,7 @@
     width: 100%;
     left: -12.5%;
   }
-  .image-mobile-container{
+  .image-mobile-container {
     height: 5rem;
   }
   .mobile-competition-background {

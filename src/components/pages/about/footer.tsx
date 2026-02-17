@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function FooterSection() {
   return (
-    <div className="footer-wrapper w-screen flex justify-between mt-[5%]">
+    <div className="footer-wrapper mt-[5%] flex w-screen justify-between">
       <Image
         src={"/images/pages/home/sobekan-bottom-left.png"}
         width={900}
         height={900}
         alt="footer-left-background"
-        className="about-footer-left-background w-[20%] h-auto"
+        className="about-footer-left-background h-auto w-[20%]"
         draggable="false"
       />
       <Image
@@ -16,7 +16,7 @@ export default function FooterSection() {
         width={900}
         height={900}
         alt="about-footer-right-background"
-        className="about-footer-right-background w-[20%] h-auto"
+        className="about-footer-right-background h-auto w-[20%]"
         draggable="false"
       />
       <Image
@@ -24,7 +24,7 @@ export default function FooterSection() {
         width={900}
         height={900}
         alt="laptop"
-        className="about-laptop absolute bottom-[5%] -right-[1.5%] w-[25%] h-auto"
+        className="about-laptop absolute -right-[1.5%] bottom-[5%] h-auto w-[25%]"
         draggable="false"
       />
       <Image
@@ -32,7 +32,7 @@ export default function FooterSection() {
         width={900}
         height={900}
         alt="laptop-spark"
-        className="about-laptop-spark absolute right-[5%] bottom-[15%] w-[15%] h-auto"
+        className="about-laptop-spark absolute right-[5%] bottom-[15%] h-auto w-[15%]"
         draggable="false"
       />
       <Image
@@ -40,7 +40,7 @@ export default function FooterSection() {
         width={900}
         height={900}
         alt="heart"
-        className="about-heart absolute left-[0%] bottom-[0%] w-[12.5%] h-auto"
+        className="about-heart absolute bottom-[0%] left-[0%] h-auto w-[12.5%]"
         draggable="false"
       />
     </div>

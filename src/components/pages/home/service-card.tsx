@@ -21,10 +21,10 @@ export default function ServiceCard({
 }: ServiceCard) {
   return (
     <div
-      className={`relative min-h-80 min-w-120 bg-[#F5F5F5] p-4 sm:p-8 flex flex-col gap-4 shadow-[-12px_12px_5px_-5px_rgba(0,0,0,0.25)] ${className}`}
+      className={`relative flex min-h-80 min-w-120 flex-col gap-4 bg-[#F5F5F5] p-4 shadow-[-12px_12px_5px_-5px_rgba(0,0,0,0.25)] sm:p-8 ${className}`}
       style={{ opacity }}
     >
-      <div className="service-image flex flex-col justify-end image-container-hsc bg-gray-200 w-full h-[65%] relative overflow-hidden">
+      <div className="service-image image-container-hsc relative flex h-[65%] w-full flex-col justify-end overflow-hidden bg-gray-200">
         {imageUrl && (
           <Image
             src={imageUrl}
@@ -35,21 +35,21 @@ export default function ServiceCard({
           />
         )}
         <div
-          className="w-full h-[10%] relative z-10"
+          className="relative z-10 h-[10%] w-full"
           style={{ backgroundColor: color }}
         ></div>
       </div>
       <div>
-        <h1 className="service-title-text font-family-gill-condensed-bold font-bold text-4xl">
+        <h1 className="service-title-text font-family-gill-condensed-bold text-4xl font-bold text-black">
           {title}
         </h1>
         <h2
-          className="service-type-text w-fit text-lg px-4 text-white font-family-impact uppercase"
+          className="service-type-text font-family-impact w-fit px-4 text-lg text-white uppercase"
           style={{ backgroundColor: color }}
         >
           {type}
         </h2>
-        <p className="service-description-text font-family-gill text-black font-bold">
+        <p className="service-description-text font-family-gill font-bold text-black">
           {description}
         </p>
       </div>
@@ -59,7 +59,7 @@ export default function ServiceCard({
         width={1000}
         height={1000}
         draggable={false}
-        className="absolute bottom-[-7.5%] z-20 left-0"
+        className="absolute bottom-[-7.5%] left-0 z-20"
       />
     </div>
   );

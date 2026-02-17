@@ -5,7 +5,7 @@ export default function FooterSection() {
     <>
       <div className="relative z-2 w-full">
         <Image
-          className="green-home-footer-left w-[30%] -top-60 h-auto absolute left-0"
+          className="green-home-footer-left absolute -top-60 left-0 h-auto w-[30%]"
           src={"/images/pages/home/green-home-footer-left.svg"}
           draggable="false"
           width={1920}
@@ -13,7 +13,7 @@ export default function FooterSection() {
           alt="footer"
         />
         <Image
-          className="yellow-spike-right w-[15%] -top-80 h-auto absolute right-0"
+          className="yellow-spike-right absolute -top-80 right-0 h-auto w-[15%]"
           src={"/images/pages/home/yellow-spike-right.png"}
           draggable="false"
           width={1920}

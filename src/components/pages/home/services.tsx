@@ -12,18 +12,18 @@ export default function ServicesSection({
   latestActivities,
 }: ServicesSectionProps) {
   return (
-    <div className="flex relative z-3 w-screen pb-[10%] flex-col justify-start items-center">
-      <h1 className="explore-text font-family-gill-condensed-bold font-extrabold text-6xl">
+    <div className="relative z-3 flex w-screen flex-col items-center justify-start pb-[10%]">
+      <h1 className="explore-text font-family-gill-condensed-bold text-6xl font-extrabold text-black">
         EXPLORE OUR
       </h1>
-      <h1 className="explore-text font-family-gill-condensed-bold font-extrabold text-6xl">
+      <h1 className="explore-text font-family-gill-condensed-bold text-6xl font-extrabold text-black">
         COMMUNITY SERVICES
       </h1>
-      <div className="home-service-card-container relative flex mt-14">
+      <div className="home-service-card-container relative mt-14 flex">
         {latestActivities.length > 0 && (
           <>
             <ServiceCard
-              className="home-service-card-left absolute left-[25%] top-12 max-h-72"
+              className="home-service-card-left absolute top-12 left-[25%] max-h-72"
               title={latestActivities[1]?.title || "No Activity"}
               type={latestActivities[1]?.category || "ACTIVITY"}
               description={truncateDescription(
@@ -45,7 +45,7 @@ export default function ServicesSection({
               opacity="100%"
             />
             <ServiceCard
-              className="home-service-card-right absolute right-[20%] top-12 max-h-72"
+              className="home-service-card-right absolute top-12 right-[20%] max-h-72"
               title={latestActivities[2]?.title || "No Activity"}
               type={latestActivities[2]?.category || "ACTIVITY"}
               description={truncateDescription(
@@ -60,7 +60,7 @@ export default function ServicesSection({
         {latestActivities.length === 0 && (
           <>
             <ServiceCard
-              className="home-service-card-left absolute left-[25%] top-12 max-h-72"
+              className="home-service-card-left absolute top-12 left-[25%] max-h-72"
               title="No Activities"
               type="ACTIVITY"
               description="No activities available at the moment"
@@ -76,7 +76,7 @@ export default function ServicesSection({
               opacity="100%"
             />
             <ServiceCard
-              className="home-service-card-right absolute right-[20%] top-12 max-h-72"
+              className="home-service-card-right absolute top-12 right-[20%] max-h-72"
               title="No Activities"
               type="ACTIVITY"
               description="No activities available at the moment"
@@ -86,11 +86,11 @@ export default function ServicesSection({
           </>
         )}
       </div>
-      <div className="relative flex justify-center items-center w-full h-full mt-20 sm:mt-40">
-        <div className="explore-button absolute w-87.5 h-30 bg-[#0E54B2] p-4 px-8 rounded-2xl z-2">
-          <div className="bg-[#ED427C] flex items-center justify-center w-full h-full absolute left-[5%] top-[-10%] rounded-2xl z-[-1]">
+      <div className="relative mt-20 flex h-full w-full items-center justify-center sm:mt-40">
+        <div className="explore-button absolute z-2 h-30 w-87.5 rounded-2xl bg-[#0E54B2] p-4 px-8">
+          <div className="absolute top-[-10%] left-[5%] z-[-1] flex h-full w-full items-center justify-center rounded-2xl bg-[#ED427C]">
             <Link href="/activities">
-              <h1 className="explore-button-text font-family-impact text-6xl text-center text-white">
+              <h1 className="explore-button-text font-family-impact text-center text-6xl text-white">
                 EXPLORE
               </h1>
             </Link>
@@ -98,7 +98,7 @@ export default function ServicesSection({
         </div>
       </div>
       <Image
-        className="flex paper-cloud w-[20%] -top-20 h-auto absolute left-0"
+        className="paper-cloud absolute -top-20 left-0 flex h-auto w-[20%]"
         src={"/images/pages/home/paper-cloud.webp"}
         draggable="false"
         width={1920}
@@ -106,7 +106,7 @@ export default function ServicesSection({
         alt="footer"
       />
       <Image
-        className="green-arrow-footer w-[15%] top-0 h-auto absolute right-0"
+        className="green-arrow-footer absolute top-0 right-0 h-auto w-[15%]"
         src={"/images/pages/home/green-arrow-home.png"}
         draggable="false"
         width={1920}
@@ -114,7 +114,7 @@ export default function ServicesSection({
         alt="footer"
       />
       <Image
-        className="red-star-footer-left w-[20%] top-[35%] h-auto absolute left-0 sm:flex hidden"
+        className="red-star-footer-left absolute top-[35%] left-0 hidden h-auto w-[20%] sm:flex"
         src={"/images/pages/home/orange-star-footer-left.png"}
         draggable="false"
         width={1920}
