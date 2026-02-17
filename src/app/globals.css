@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f1eee6;
   --foreground: #171717;
 }
 
@@ -99,6 +99,7 @@ body {
   }
 }
 
+/* Swing Effect */
 .swing-hover:hover {
   animation: swing 0.7s ease-in-out;
   transform-origin: top center;

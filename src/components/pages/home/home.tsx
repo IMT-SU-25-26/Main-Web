@@ -1,14 +1,14 @@
 "use client";
 
 import "@/styles/home.css";
-import Hero from "@/components/pages/home/hero";
-import Union from "@/components/pages/home/union";
-import Competition from "@/components/pages/home/competition";
-import Services from "@/components/pages/home/services";
-import Footer from "@/components/pages/home/footer";
-import { Activity } from "@/types/db/activity";
-import { useHomeAnimations } from "@/hooks/useHomeAnimations";
+import Hero from "./hero";
+import Union from "./union";
+import Competition from "./competition";
+import Services from "./services";
+import Footer from "./footer";
 import { useRef, RefObject } from "react";
+import { useHomeAnimations } from "@/hooks/useHomeAnimations";
+import { Activity } from "@/types/db/activity";
 
 interface HomePageProps {
   latestActivities: Activity[];

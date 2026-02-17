@@ -35,7 +35,8 @@ export default function HeroSection() {
         className="about-us-dragon-breath-mobile absolute top-[28.5%] right-[17%] h-auto w-[20%] sm:hidden"
         draggable="false"
       />
-      {/* dekstop */}
+
+      {/* Desktop */}
       <div className="about-us-wrapper relative mt-26 hidden w-full items-center justify-center gap-48 sm:flex">
         <div className="left-about-card relative flex h-80 w-1/3 flex-col gap-4 rounded-3xl bg-white p-12 shadow-[-12px_12px_5px_-5px_rgba(0,0,0,0.25)]">
           <Image
@@ -54,10 +55,10 @@ export default function HeroSection() {
             className="yellow-star-about-us absolute -right-[8%] -bottom-[10%] h-auto w-[25%]"
             draggable="false"
           />
-          <h1 className="about-us-card-title-text font-family-gill-condensed-bold text-5xl font-bold">
+          <h1 className="about-us-card-title-text font-family-gill-condensed-bold text-5xl font-bold text-black">
             ABOUT US
           </h1>
-          <p className="about-us-card-description-text font-family-gill text-2xl">
+          <p className="about-us-card-description-text font-family-gill text-2xl text-black">
             Student Union Information and Multimedia Technology is a student-led
             organization that serves as a platform for students of the
             Informatics study program to grow professionally, socially, and
@@ -66,6 +67,7 @@ export default function HeroSection() {
             skills, and support innovation in technology.
           </p>
         </div>
+
         <Image
           src={"/images/pages/home/dragon.svg"}
           width={900}
@@ -126,13 +128,14 @@ export default function HeroSection() {
           <div className="su-imt-team-card-background relative h-87.5 w-125 rotate-[8deg] bg-[#EAD6B1] shadow-[12px_12px_5px_-5px_rgba(0,0,0,0.25)]"></div>
           <div className="su-imt-team-card-foreground absolute top-[10%] -left-[10%] flex h-87.5 w-125 rotate-[8deg] flex-col gap-6 bg-[#FFFF] p-4 shadow-[12px_12px_5px_-5px_rgba(0,0,0,0.25)]">
             <div className="su-imt-team-card-image-container h-[80%] w-full bg-[url('/images/pages/about/su_imt_team.webp')] bg-cover bg-center bg-no-repeat"></div>
-            <h1 className="su-imt-team-card-text font-family-gill text-2xl font-bold">
+            <h1 className="su-imt-team-card-text font-family-gill text-2xl font-bold text-black">
               SU IMT Team
             </h1>
           </div>
         </div>
       </div>
-      {/* mobile */}
+
+      {/* Mobile */}
       <div className="about-us-wrapper relative mt-10 flex w-full items-center justify-start gap-48 sm:hidden">
         <div className="left-about-card relative ml-[5%] flex h-80 w-[60%] flex-col gap-4 rounded-xl bg-white p-12 shadow-[-12px_12px_5px_-5px_rgba(0,0,0,0.25)]">
           <Image
@@ -151,10 +154,10 @@ export default function HeroSection() {
             className="yellow-star-about-us absolute -right-[8%] -bottom-[10%] h-auto w-[25%]"
             draggable="false"
           />
-          <h1 className="about-us-card-title-text font-family-gill-condensed-bold text-5xl font-bold">
+          <h1 className="about-us-card-title-text font-family-gill-condensed-bold text-5xl font-bold text-black">
             ABOUT US
           </h1>
-          <p className="about-us-card-description-text font-family-gill text-2xl">
+          <p className="about-us-card-description-text font-family-gill text-2xl text-black">
             Student Union Information and Multimedia Technology is a student-led
             organization that serves as a platform for students of the
             Informatics study program to grow professionally, socially, and
@@ -163,6 +166,7 @@ export default function HeroSection() {
             skills, and support innovation in technology.
           </p>
         </div>
+
         <Image
           src={"/images/pages/home/dragon.svg"}
           width={900}
@@ -204,6 +208,7 @@ export default function HeroSection() {
           draggable="false"
         />
       </div>
+
       <div className="relative z-2 mt-[10%] flex w-full justify-end sm:hidden">
         <Image
           src={"/images/pages/about/peniti.webp"}
@@ -217,7 +222,7 @@ export default function HeroSection() {
           <div className="su-imt-team-card-background relative h-87.5 w-125 rotate-[8deg] bg-[#EAD6B1] shadow-[12px_12px_5px_-5px_rgba(0,0,0,0.25)]"></div>
           <div className="su-imt-team-card-foreground absolute top-[10%] right-[5%] flex h-87.5 w-125 rotate-[8deg] flex-col gap-6 bg-[#FFFF] p-4 shadow-[12px_12px_5px_-5px_rgba(0,0,0,0.25)]">
             <div className="su-imt-team-card-image-container h-[80%] w-full bg-[url('/images/pages/about/su_imt_team.webp')] bg-cover bg-center bg-no-repeat"></div>
-            <h1 className="su-imt-team-card-text font-family-gill text-2xl font-bold">
+            <h1 className="su-imt-team-card-text font-family-gill text-2xl font-bold text-black">
               SU IMT Team
             </h1>
           </div>

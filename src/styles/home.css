@@ -58,8 +58,11 @@
 .explore-button:hover {
   transform: scale(1.05);
 }
+
+/* Responsive Queries */
 @media (max-width: 3840px) and (max-height: 2160px) {
 }
+
 @media (max-width: 2850px) and (max-height: 1800px) {
   /* start welcome part */
   .yellow-star-landing {
