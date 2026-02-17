@@ -35,8 +35,8 @@ export default function CompetitionSection() {
                 </h1>
                 <p className="competition-mobile-description-text w-full text-xs">
                   Ready to show off your skills? Technoday kembali hadir di
-                  tahun 2025 dengan tema &quot; Stellar Patterns to Real
-                  World Solutions!&quot;
+                  tahun 2025 dengan tema &quot; Stellar Patterns to Real World
+                  Solutions!&quot;
                 </p>
                 <p className="competition-mobile-member-text text-xs text-end w-full">
                   Team: 3 Members
@@ -110,8 +110,8 @@ export default function CompetitionSection() {
               TECHNODAY 2025
             </h1>
             <p className="competition-description-text text-xl">
-              Ready to show off your skills? Technoday kembali hadir di
-              tahun 2025 dengan tema &quot; Stellar Patterns to Real World
+              Ready to show off your skills? Technoday kembali hadir di tahun
+              2025 dengan tema &quot; Stellar Patterns to Real World
               Solutions!&quot;
             </p>
             <p className="competition-member-text text-xl text-end">
