@@ -7,7 +7,7 @@ import Competition from "@/components/pages/home/competition";
 import Services from "@/components/pages/home/services";
 import Footer from "@/components/pages/home/footer";
 import { Activity } from "@/types/db/activity";
-import { useHomeAnimations } from "@/hooks/home";
+import { useHomeAnimations } from "@/hooks/useHomeAnimations";
 import { useRef, RefObject } from "react";
 
 interface HomePageProps {
