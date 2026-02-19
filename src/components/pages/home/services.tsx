@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ServiceCard from "./service-card";
+import Card from "./card";
 import { Activity } from "@/types/db/activity";
 import { truncateDescription } from "@/utils/truncate";
 
@@ -22,7 +22,7 @@ export default function ServicesSection({
       <div className="home-service-card-container relative mt-14 flex">
         {latestActivities.length > 0 && (
           <>
-            <ServiceCard
+            <Card
               className="home-service-card-left absolute top-12 left-[25%] max-h-72"
               title={latestActivities[1]?.title || "No Activity"}
               type={latestActivities[1]?.category || "ACTIVITY"}
@@ -33,7 +33,7 @@ export default function ServicesSection({
               color="#0555AB"
               opacity="75%"
             />
-            <ServiceCard
+            <Card
               className="home-service-card-center relative z-10"
               title={latestActivities[0]?.title || "No Activity"}
               type={latestActivities[0]?.category || "ACTIVITY"}
@@ -44,7 +44,7 @@ export default function ServicesSection({
               color="#0555AB"
               opacity="100%"
             />
-            <ServiceCard
+            <Card
               className="home-service-card-right absolute top-12 right-[20%] max-h-72"
               title={latestActivities[2]?.title || "No Activity"}
               type={latestActivities[2]?.category || "ACTIVITY"}
@@ -59,7 +59,7 @@ export default function ServicesSection({
         )}
         {latestActivities.length === 0 && (
           <>
-            <ServiceCard
+            <Card
               className="home-service-card-left absolute top-12 left-[25%] max-h-72"
               title="No Activities"
               type="ACTIVITY"
@@ -67,7 +67,7 @@ export default function ServicesSection({
               color="#0555AB"
               opacity="75%"
             />
-            <ServiceCard
+            <Card
               className="home-service-card-center relative z-10"
               title="No Activities"
               type="ACTIVITY"
@@ -75,7 +75,7 @@ export default function ServicesSection({
               color="#0555AB"
               opacity="100%"
             />
-            <ServiceCard
+            <Card
               className="home-service-card-right absolute top-12 right-[20%] max-h-72"
               title="No Activities"
               type="ACTIVITY"

@@ -1,4 +1,4 @@
-import "@/styles/committee-card.css";
+import "@/styles/card.css";
 import Image from "next/image";
 import {
   DIVISION_CONFIG,
