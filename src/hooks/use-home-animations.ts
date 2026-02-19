@@ -2,14 +2,9 @@ import { RefObject } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { scrollDefaults } from "@/utils/scroll-trigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
-// Reusable ScrollTrigger
-const scrollDefaults = {
-  toggleActions: "play none none reverse" as const,
-  fastScrollEnd: true,
-};
 
 export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
   useGSAP(

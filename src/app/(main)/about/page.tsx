@@ -6,7 +6,7 @@ import VisionMission from "@/components/pages/about/vision-mission";
 import Values from "@/components/pages/about/values";
 import Footer from "@/components/pages/about/footer";
 import { useRef, RefObject } from "react";
-import { useAboutAnimations } from "@/hooks/useAboutAnimations";
+import { useAboutAnimations } from "@/hooks/use-about-animations";
 
 export default function AboutPage() {
   const containerRef = useRef<HTMLDivElement>(null);
