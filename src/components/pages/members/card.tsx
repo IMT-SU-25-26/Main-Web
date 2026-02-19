@@ -70,7 +70,7 @@ export default function PresidentCard({
       >
         {role}
       </div>
-      <div className="committee-name mt-3.5 text-sm">{name}</div>
+      <div className="committee-name mt-3.5 text-sm text-black">{name}</div>
     </div>
   );
 }

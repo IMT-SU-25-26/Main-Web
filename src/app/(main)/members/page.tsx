@@ -11,12 +11,12 @@ import PublicRelations from "@/components/pages/members/public-relations";
 import SocialActivity from "@/components/pages/members/social-activity";
 import Technology from "@/components/pages/members/technology";
 import { useRef, RefObject } from "react";
-import { useAboutAnimations } from "@/hooks/use-about-animations";
+import { useMembersAnimations } from "@/hooks/use-members-animations";
 
 export default function Members() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useAboutAnimations(containerRef as RefObject<HTMLElement>);
+  useMembersAnimations(containerRef as RefObject<HTMLElement>);
 
   return (
     <div className="overflow-x-hidden">

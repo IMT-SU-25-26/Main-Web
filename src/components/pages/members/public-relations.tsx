@@ -30,7 +30,7 @@ export default function PublicRelationsSection() {
           role="COORDINATOR"
           division="PUBLIC RELATION"
           gender="GIRL"
-          imagesrc="/images/pages/members/public-relations/felicia.jpg"
+          imagesrc="/images/pages/members/public-relations/feli.jpg"
         />
         <Card
           id="pr-2"

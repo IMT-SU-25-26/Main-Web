@@ -9,7 +9,7 @@ export default function DesignSection() {
           PDD DESIGN
         </h1>
         <Image
-          src="/images/pages/members/decorations/pdddesigndesign.svg"
+          src="/images/pages/members/decorations/pdddesignrectangle.svg"
           alt="Committee Decoration"
           width={150}
           height={150}
