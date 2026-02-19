@@ -1,9 +1,9 @@
 "use client";
 
-import "@/styles/not-found.css";
+import "@/styles/error.css";
 import Link from "next/link";
 
-export default function NotFoundPage() {
+export default function NotFound() {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-indigo-50 via-purple-50 to-blue-50 p-4">
       {/* Floating Particles */}
@@ -62,7 +62,7 @@ export default function NotFoundPage() {
         style={{ animationDelay: "3.5s" }}
       ></div>
 
-      {/* Main Content */}
+      {/* Main Card */}
       <div className="relative w-full max-w-md transform rounded-2xl border border-white/20 bg-white/90 p-12 text-center shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-105">
         {/* Badge */}
         <div className="pulse-glow absolute -top-4 left-1/2 z-10 -translate-x-1/2 transform rounded-full bg-indigo-500 px-6 py-2 font-mono text-sm text-white shadow-lg">

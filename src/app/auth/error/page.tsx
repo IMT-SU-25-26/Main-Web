@@ -1,9 +1,9 @@
 "use client";
 
-import "@/styles/auth-error.css";
+import "@/styles/error.css";
 import Link from "next/link";
 
-export default function AuthErrorPage() {
+export default function Error() {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-red-50 via-rose-50 to-pink-50 p-4">
       {/* Floating Particles */}
@@ -62,7 +62,7 @@ export default function AuthErrorPage() {
         style={{ animationDelay: "3.5s" }}
       ></div>
 
-      {/* Main Content Card */}
+      {/* Main Card */}
       <div className="relative w-full max-w-md transform rounded-2xl border border-white/20 bg-white/90 p-12 text-center shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-105">
         {/* Badge */}
         <div className="pulse-glow absolute -top-4 left-1/2 z-10 -translate-x-1/2 transform rounded-full bg-red-500 px-6 py-2 font-mono text-sm text-white shadow-lg">
