@@ -9,14 +9,14 @@ export default function PublicRelationsSection() {
           PUBLIC RELATION
         </h1>
         <Image
-          src="/committee/publicrelationrectangle.svg"
+          src="/images/pages/members/decorations/publicrelationrectangle.svg"
           alt="Committee decoration"
           width={150}
           height={150}
           className="absolute top-16 z-0 h-auto w-56 sm:top-20 sm:w-[18rem]"
         />
         <Image
-          src="/committee/catasset.png"
+          src="/images/pages/members/decorations/catasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -30,7 +30,7 @@ export default function PublicRelationsSection() {
           role="COORDINATOR"
           division="PUBLIC RELATION"
           gender="GIRL"
-          imagesrc="/pr/feli.jpg"
+          imagesrc="/images/pages/members/public-relations/felicia.jpg"
         />
         <Card
           id="pr-2"
@@ -38,7 +38,7 @@ export default function PublicRelationsSection() {
           role="MEMBER"
           division="PUBLIC RELATION"
           gender="BOY"
-          imagesrc="/pr/shatrya.jpg"
+          imagesrc="/images/pages/members/public-relations/shatrya.jpg"
         />
         <Card
           id="pr-3"
@@ -46,7 +46,7 @@ export default function PublicRelationsSection() {
           role="MEMBER"
           division="PUBLIC RELATION"
           gender="BOY"
-          imagesrc="/pr/dylan.jpg"
+          imagesrc="/images/pages/members/public-relations/dylan.jpg"
         />
       </div>
     </>

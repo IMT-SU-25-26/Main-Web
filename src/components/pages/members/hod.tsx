@@ -9,7 +9,7 @@ export default function HODSection() {
           HEAD OF DEPARTMENT
         </h1>
         <Image
-          src="/committee/hodrectangle.svg"
+          src="/images/pages/members/decorations/hodrectangle.svg"
           alt="Committee decoration"
           width={600}
           height={120}
@@ -23,7 +23,7 @@ export default function HODSection() {
           role="PRESIDENT"
           division="HOD"
           gender="BOY"
-          imagesrc="/hod/dave.jpg"
+          imagesrc="/images/pages/members/hod/dave.jpg"
         />
         <Card
           id="hod-2"
@@ -31,7 +31,7 @@ export default function HODSection() {
           role="VICE PRES"
           division="HOD"
           gender="BOY"
-          imagesrc="/hod/acel.jpg"
+          imagesrc="/images/pages/members/hod/acel.jpg"
         />
         <Card
           id="hod-3"
@@ -39,7 +39,7 @@ export default function HODSection() {
           role="SECRETARY"
           division="HOD"
           gender="GIRL"
-          imagesrc="/hod/there.jpg"
+          imagesrc="/images/pages/members/hod/there.jpg"
         />
         <Card
           id="hod-4"
@@ -47,7 +47,7 @@ export default function HODSection() {
           role="SECRETARY"
           division="HOD"
           gender="GIRL"
-          imagesrc="/hod/chelsealu.jpg"
+          imagesrc="/images/pages/members/hod/chelsealu.jpg"
         />
         <Card
           id="hod-5"
@@ -55,7 +55,7 @@ export default function HODSection() {
           role="TREASURER"
           division="HOD"
           gender="GIRL"
-          imagesrc="/hod/priscilia.jpg"
+          imagesrc="/images/pages/members/hod/priscilia.jpg"
         />
         <Card
           id="hod-6"
@@ -63,7 +63,7 @@ export default function HODSection() {
           role="TREASURER"
           division="HOD"
           gender="GIRL"
-          imagesrc="/hod/abbie.jpg"
+          imagesrc="/images/pages/members/hod/abbie.jpg"
         />
       </div>
     </>

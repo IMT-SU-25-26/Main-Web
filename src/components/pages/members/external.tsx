@@ -9,14 +9,14 @@ export default function ExternalSection() {
           EXTERNAL DIVISION
         </h1>
         <Image
-          src="/committee/externalrectangle.svg"
+          src="/images/pages/members/decorations/externalrectangle.svg"
           alt="Committee decoration"
           width={150}
           height={150}
           className="absolute top-16 z-0 h-auto w-60 sm:top-20 sm:w-76"
         />
         <Image
-          src="/committee/longpitaasset.png"
+          src="/images/pages/members/decorations/longpitaasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -30,7 +30,7 @@ export default function ExternalSection() {
           role="COORDINATOR"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/delvincent.jpg"
+          imagesrc="/images/pages/members/external/delvincent.jpg"
         />
         <Card
           id="external-2"
@@ -38,7 +38,7 @@ export default function ExternalSection() {
           role="MEMBER"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/altaf.jpg"
+          imagesrc="/images/pages/members/external/altaf.jpg"
         />
         <Card
           id="external-3"
@@ -46,7 +46,7 @@ export default function ExternalSection() {
           role="MEMBER"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/bb.jpg"
+          imagesrc="/images/pages/members/external/bb.jpg"
         />
         <Card
           id="external-4"
@@ -54,7 +54,7 @@ export default function ExternalSection() {
           role="MEMBER"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/niki.jpg"
+          imagesrc="/images/pages/members/external/niki.jpg"
         />
         <Card
           id="external-5"
@@ -62,7 +62,7 @@ export default function ExternalSection() {
           role="MEMBER"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/jose.jpg"
+          imagesrc="/images/pages/members/external/jose.jpg"
         />
         <Card
           id="external-6"
@@ -70,7 +70,7 @@ export default function ExternalSection() {
           role="MEMBER"
           division="EXTERNAL"
           gender="BOY"
-          imagesrc="/external/wesley.jpg"
+          imagesrc="/images/pages/members/external/wesley.jpg"
         />
       </div>
     </>

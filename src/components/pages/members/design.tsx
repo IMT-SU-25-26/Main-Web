@@ -9,22 +9,22 @@ export default function DesignSection() {
           PDD DESIGN
         </h1>
         <Image
-          src="/committee/pdddesignrectangle.svg"
-          alt="Committee decoration"
+          src="/images/pages/members/decorations/pdddesigndesign.svg"
+          alt="Committee Decoration"
           width={150}
           height={150}
           className="absolute top-16 z-0 h-auto w-40 sm:top-20 sm:w-48"
         />
         <Image
-          src="/committee/leftcloudasset.png"
-          alt="Committee decoration"
+          src="/images/pages/members/decorations/leftcloudasset.png"
+          alt="Committee Decoration"
           width={150}
           height={150}
           className="leftcloudasset absolute z-0 hidden h-auto -translate-x-108 translate-y-8 lg:flex lg:w-40 lg:-translate-x-174"
         />
         <Image
-          src="/committee/redstarasset.png"
-          alt="Committee decoration"
+          src="/images/pages/members/decorations/redstarasset.png"
+          alt="Committee Decoration"
           width={150}
           height={150}
           className="redstarasset absolute z-0 h-auto w-24 translate-x-96 translate-y-4 sm:w-48 sm:-translate-x-[-29rem] sm:translate-y-4 lg:translate-x-176"
@@ -37,7 +37,7 @@ export default function DesignSection() {
           role="COORDINATOR"
           division="PDD DESIGN"
           gender="BOY"
-          imagesrc="/pdddesign/rex.jpg"
+          imagesrc="/images/pages/members/design/rex.jpg"
         />
         <Card
           id="pdddesign-2"
@@ -45,7 +45,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="GIRL"
-          imagesrc="/pdddesign/cz.jpg"
+          imagesrc="/images/pages/members/design/cz.jpg"
         />
         <Card
           id="pdddesign-3"
@@ -53,7 +53,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="GIRL"
-          imagesrc="/pdddesign/matahari.jpg"
+          imagesrc="/images/pages/members/design/matahari.jpg"
         />
         <Card
           id="pdddesign-4"
@@ -61,7 +61,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="BOY"
-          imagesrc="/pdddesign/bc.jpg"
+          imagesrc="/images/pages/members/design/bc.jpg"
         />
       </div>
       <div className="section-reveal pdddocumentation-container relative mt-5 grid grid-cols-2 items-center justify-center gap-10 px-4 sm:grid-cols-3 sm:gap-5">
@@ -71,7 +71,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="BOY"
-          imagesrc="/pdddesign/jc.jpg"
+          imagesrc="/images/pages/members/design/jc.jpg"
         />
         <Card
           id="pdddesign-6"
@@ -79,7 +79,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="BOY"
-          imagesrc="/pdddesign/jason.jpg"
+          imagesrc="/images/pages/members/design/jason.jpg"
         />
         <Card
           id="pdddesign-7"
@@ -87,7 +87,7 @@ export default function DesignSection() {
           role="MEMBER"
           division="PDD DESIGN"
           gender="GIRL"
-          imagesrc="/pr/clarice.jpg"
+          imagesrc="/images/pages/members/design/clarice.jpg"
         />
       </div>
     </>

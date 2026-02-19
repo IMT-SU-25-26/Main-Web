@@ -10,36 +10,36 @@ export default function TitleSection() {
 
       {/* Decorative Assets */}
       <Image
-        src="/committee/rectanglecommitteememberback.svg"
-        alt="Committee decoration"
+        src="/images/pages/members/decorations/rectanglecommitteememberback.svg"
+        alt="Committee Decoration"
         width={150}
         height={150}
         className="absolute left-1/2 z-0 h-auto w-74 -translate-x-1/2 sm:w-full lg:w-full"
       />
       <Image
-        src="/committee/rectanglecommitteememberfront.svg"
-        alt="Committee decoration"
+        src="/images/pages/members/decorations/rectanglecommitteememberfront.svg"
+        alt="Committee Decoration"
         width={150}
         height={150}
         className="absolute top-[0.8rem] left-1/2 z-0 h-auto w-74 -translate-x-1/2 sm:-top-[0.05rem] sm:w-full lg:w-full"
       />
       <Image
-        src="/committee/paperclip.png"
-        alt="Committee decoration"
+        src="/images/pages/members/decorations/paperclip.png"
+        alt="Committee Decoration"
         width={150}
         height={150}
         className="absolute top-[0.8rem] z-0 h-auto w-14 -translate-x-34 sm:top-[0.05rem] sm:left-30 sm:w-18"
       />
       <Image
-        src="/committee/quoteasset.png"
-        alt="Committee decoration"
+        src="/images/pages/members/decorations/quoteasset.png"
+        alt="Committee Decoration"
         width={150}
         height={150}
         className="quoteasset absolute z-0 h-auto w-0 -translate-x-102 sm:w-28 sm:-translate-x-140 lg:-translate-x-168"
       />
       <Image
-        src="/committee/bookasset.png"
-        alt="Committee decoration"
+        src="/images/pages/members/decorations/bookasset.png"
+        alt="Committee Decoration"
         width={150}
         height={150}
         className="bookasset absolute z-0 h-auto w-0 -translate-x-[-29rem] -translate-y-4 sm:w-60 sm:translate-x-148 lg:translate-x-172"

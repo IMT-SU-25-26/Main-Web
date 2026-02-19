@@ -10,21 +10,21 @@ export default function InternalSection() {
         </h1>
 
         <Image
-          src="/committee/internalrectangle.svg"
+          src="/images/pages/members/decorations/internalrectangle.svg"
           alt="Committee decoration"
           width={600}
           height={120}
           className="absolute top-12 z-0 h-auto w-60 sm:top-20 sm:w-76 lg:w-76"
         />
         <Image
-          src="/committee/yellowstarasset.png"
+          src="/images/pages/members/decorations/yellowstarasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
           className="yellowstarasset absolute z-0 h-auto w-24 -translate-x-102 translate-y-4 sm:w-48 sm:-translate-x-140 sm:translate-y-8 lg:-translate-x-184"
         />
         <Image
-          src="/committee/rightcloudasset.png"
+          src="/images/pages/members/decorations/rightcloudasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -38,7 +38,7 @@ export default function InternalSection() {
           role="COORDINATOR"
           division="INTERNAL"
           gender="BOY"
-          imagesrc="/internal/rinaldy.jpg"
+          imagesrc="/images/pages/members/internal/rinaldy.jpg"
         />
         <Card
           id="internal-2"
@@ -46,7 +46,7 @@ export default function InternalSection() {
           role="MEMBER"
           division="INTERNAL"
           gender="BOY"
-          imagesrc="/internal/dave.jpg"
+          imagesrc="/images/pages/members/internal/dave.jpg"
         />
         <Card
           id="internal-3"
@@ -54,7 +54,7 @@ export default function InternalSection() {
           role="MEMBER"
           division="INTERNAL"
           gender="BOY"
-          imagesrc="/internal/amadeus.jpg"
+          imagesrc="/images/pages/members/internal/amadeus.jpg"
         />
         <Card
           id="internal-4"
@@ -62,7 +62,7 @@ export default function InternalSection() {
           role="MEMBER"
           division="INTERNAL"
           gender="GIRL"
-          imagesrc="/internal/eileen.jpg"
+          imagesrc="/images/pages/members/internal/eileen.jpg"
         />
         <Card
           id="internal-5"
@@ -70,7 +70,7 @@ export default function InternalSection() {
           role="MEMBER"
           division="INTERNAL"
           gender="BOY"
-          imagesrc="/internal/angga.jpg"
+          imagesrc="/images/pages/members/internal/angga.jpg"
         />
       </div>
     </>

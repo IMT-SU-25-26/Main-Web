@@ -9,14 +9,14 @@ export default function TechnologySection() {
           TECHNOLOGY
         </h1>
         <Image
-          src="/committee/technologyrectangle.svg"
+          src="/images/pages/members/decorations/technologyrectangle.svg"
           alt="Committee decoration"
           width={150}
           height={150}
           className="absolute top-16 z-0 h-auto w-48 sm:top-20 sm:w-62"
         />
         <Image
-          src="/committee/tapeasset.png"
+          src="/images/pages/members/decorations/tapeasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -30,7 +30,7 @@ export default function TechnologySection() {
           role="COORDINATOR"
           division="TECHNOLOGY"
           gender="BOY"
-          imagesrc="/tech/valen.jpg"
+          imagesrc="/images/pages/members/technology/valen.jpg"
         />
         <Card
           id="tech-2"
@@ -38,7 +38,7 @@ export default function TechnologySection() {
           role="MEMBER"
           division="TECHNOLOGY"
           gender="BOY"
-          imagesrc="/tech/bryan.jpg"
+          imagesrc="/images/pages/members/technology/bryan.jpg"
         />
         <Card
           id="tech-3"
@@ -46,7 +46,7 @@ export default function TechnologySection() {
           role="MEMBER"
           division="TECHNOLOGY"
           gender="BOY"
-          imagesrc="/tech/obie.jpg"
+          imagesrc="/images/pages/members/technology/obie.jpg"
         />
         <Card
           id="tech-4"
@@ -54,7 +54,7 @@ export default function TechnologySection() {
           role="MEMBER"
           division="TECHNOLOGY"
           gender="BOY"
-          imagesrc="/tech/felix.jpg"
+          imagesrc="/images/pages/members/technology/felix.jpg"
         />
         <Card
           id="tech-5"
@@ -62,7 +62,7 @@ export default function TechnologySection() {
           role="MEMBER"
           division="TECHNOLOGY"
           gender="BOY"
-          imagesrc="/tech/nicho.jpg"
+          imagesrc="/images/pages/members/technology/nicho.jpg"
         />
       </div>
     </>

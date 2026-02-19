@@ -9,14 +9,14 @@ export default function DocumentationSection() {
           PDD DOCUMENTATION
         </h1>
         <Image
-          src="/committee/pdddocumentationrectangle.svg"
+          src="/images/pages/members/decorations/pdddocumentationrectangle.svg"
           alt="Committee decoration"
           width={150}
           height={150}
           className="absolute top-[4.3rem] z-0 h-auto w-[18rem] sm:top-20 sm:w-148"
         />
         <Image
-          src="/committee/pin.png"
+          src="/images/pages/members/decorations/pin.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -30,7 +30,7 @@ export default function DocumentationSection() {
           role="COORDINATOR"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/matthewregan.jpg"
+          imagesrc="/images/pages/members/documentation/matthewregan.jpg"
         />
         <Card
           id="pdddoc-2"
@@ -38,7 +38,7 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/sean.jpg"
+          imagesrc="/images/pages/members/documentation/sean.jpg"
         />
         <Card
           id="pdddoc-3"
@@ -46,7 +46,7 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/flabianos.jpg"
+          imagesrc="/images/pages/members/documentation/flabianos.jpg"
         />
         <Card
           id="pdddoc-4"
@@ -54,7 +54,7 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/keane.jpg"
+          imagesrc="/images/pages/members/documentation/keane.jpg"
         />
       </div>
       <div className="section-reveal pdddocumentation-container relative mt-5 grid grid-cols-2 items-center justify-center gap-10 px-4 sm:grid-cols-3 sm:gap-5">
@@ -64,7 +64,7 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/ivan.jpg"
+          imagesrc="/images/pages/members/documentation/ivan.jpg"
         />
         <Card
           id="pdddoc-6"
@@ -72,7 +72,7 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/clarrence.jpg"
+          imagesrc="/images/pages/members/documentation/clarrence.jpg"
         />
         <Card
           id="pdddoc-7"
@@ -80,17 +80,17 @@ export default function DocumentationSection() {
           role="MEMBER"
           division="PDD DOCUMENTATION"
           gender="BOY"
-          imagesrc="/pdddocum/kenneth.jpg"
+          imagesrc="/images/pages/members/documentation/kenneth.jpg"
         />
         <Image
-          src="/committee/arrowasset.png"
+          src="/images/pages/members/decorations/arrowasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
           className="arrowasset absolute z-0 h-auto w-0 sm:w-0 sm:-translate-x-100 sm:-translate-y-24 lg:w-[16rem] lg:-translate-x-124 lg:-translate-y-40"
         />
         <Image
-          src="/committee/rightcloudasset.png"
+          src="/images/pages/members/decorations/rightcloudasset.png"
           alt="Committee decoration"
           width={150}
           height={150}

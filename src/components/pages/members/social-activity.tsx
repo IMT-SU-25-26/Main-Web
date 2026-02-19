@@ -9,21 +9,21 @@ export default function SocialActivitySection() {
           SOCIAL ACTIVITY
         </h1>
         <Image
-          src="/committee/socialactivityrectangle.svg"
+          src="/images/pages/members/decorations/socialactivityrectangle.svg"
           alt="Committee decoration"
           width={150}
           height={150}
           className="absolute top-16 z-0 h-auto w-52 sm:top-20 sm:w-68"
         />
         <Image
-          src="/committee/bigleftcloudasset.png"
+          src="/images/pages/members/decorations/bigleftcloudasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
           className="bigleftcloudasset absolute z-0 h-auto w-0 -translate-y-8 sm:w-0 sm:-translate-x-140 sm:translate-y-4 lg:w-[18rem] lg:-translate-x-160"
         />
         <Image
-          src="/committee/starasset.png"
+          src="/images/pages/members/decorations/starasset.png"
           alt="Committee decoration"
           width={150}
           height={150}
@@ -37,7 +37,7 @@ export default function SocialActivitySection() {
           role="COORDINATOR"
           division="SOCIAL ACTIVITY"
           gender="BOY"
-          imagesrc="/sa/aaron.jpg"
+          imagesrc="/images/pages/members/social-activity/aaron.jpg"
         />
         <Card
           id="sa-2"
@@ -45,7 +45,7 @@ export default function SocialActivitySection() {
           role="MEMBER"
           division="SOCIAL ACTIVITY"
           gender="BOY"
-          imagesrc="/sa/hanz.jpg"
+          imagesrc="/images/pages/members/social-activity/hanz.jpg"
         />
         <Card
           id="sa-3"
@@ -53,7 +53,7 @@ export default function SocialActivitySection() {
           role="MEMBER"
           division="SOCIAL ACTIVITY"
           gender="BOY"
-          imagesrc="/sa/dzaky.jpg"
+          imagesrc="/images/pages/members/social-activity/dzaky.jpg"
         />
         <Card
           id="sa-4"
@@ -61,7 +61,7 @@ export default function SocialActivitySection() {
           role="MEMBER"
           division="SOCIAL ACTIVITY"
           gender="BOY"
-          imagesrc="/sa/jeferey.jpg"
+          imagesrc="/images/pages/members/social-activity/jeferey.jpg"
         />
       </div>
     </>
