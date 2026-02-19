@@ -16,7 +16,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
     () => {
       gsap.defaults({ force3D: true, overwrite: "auto" });
 
-      // Hero
+      // Hero Elements
       gsap.set(
         [
           ".red-bubble",
@@ -44,7 +44,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
         { opacity: 0, scale: 0.8, y: -50 },
       );
 
-      // Union
+      // Union Elements
       gsap.set(".what-is-su-imt-text", { opacity: 0, y: 100, scale: 0.8 });
       gsap.set(".su-imt-description", { opacity: 0, y: 50 });
       gsap.set(".learn-more-button", { opacity: 0, scale: 0.8 });
@@ -54,7 +54,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
         scale: 0.8,
       });
 
-      // Competition
+      // Competition Elements
       gsap.set(".competition-text", { opacity: 0, y: 50 });
       gsap.set(".competition-left-container", { opacity: 0, x: -100 });
       gsap.set(".competition-right-container", { opacity: 0, x: 100 });
@@ -64,7 +64,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
         rotation: -5,
       });
 
-      // Services
+      // Services Elements
       gsap.set(".explore-text", { opacity: 0, y: 50 });
       gsap.set(
         [
@@ -81,7 +81,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
         scale: 0.8,
       });
 
-      // Footer
+      // Footer Elements
       gsap.set([".green-home-footer-left", ".yellow-spike-right"], {
         opacity: 0,
         y: 50,
@@ -311,7 +311,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
           "-=0.6",
         );
 
-      // Footer Timeline
+      // Footer Animations
       gsap.to([".green-home-footer-left", ".yellow-spike-right"], {
         opacity: 1,
         y: 0,
