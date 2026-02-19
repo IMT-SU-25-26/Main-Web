@@ -5,68 +5,74 @@ import Link from "next/link";
 
 export default function NotFoundPage() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-indigo-50 via-purple-50 to-blue-50 flex items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-10 left-10 w-24 h-24 bg-indigo-300 rounded-full opacity-40 float1"></div>
-      <div className="absolute top-32 right-20 w-20 h-20 bg-purple-300 rounded-full opacity-50 float2"></div>
-      <div className="absolute bottom-20 left-32 w-16 h-16 bg-blue-300 rounded-full opacity-45 float3"></div>
-      <div className="absolute bottom-40 right-10 w-28 h-28 bg-indigo-400 rounded-full opacity-35 float4"></div>
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-indigo-50 via-purple-50 to-blue-50 p-4">
+      {/* Floating Particles */}
+      <div className="float1 absolute top-10 left-10 h-24 w-24 rounded-full bg-indigo-300 opacity-40"></div>
+      <div className="float2 absolute top-32 right-20 h-20 w-20 rounded-full bg-purple-300 opacity-50"></div>
+      <div className="float3 absolute bottom-20 left-32 h-16 w-16 rounded-full bg-blue-300 opacity-45"></div>
+      <div className="float4 absolute right-10 bottom-40 h-28 w-28 rounded-full bg-indigo-400 opacity-35"></div>
 
+      {/* Extra Floating Particles */}
       <div
-        className="absolute top-20 left-1/3 w-12 h-12 bg-violet-300 rounded-full opacity-40 float2"
+        className="float2 absolute top-20 left-1/3 h-12 w-12 rounded-full bg-violet-300 opacity-40"
         style={{ animationDelay: "2s" }}
       ></div>
       <div
-        className="absolute top-1/3 right-1/4 w-10 h-10 bg-cyan-300 rounded-full opacity-45 float1"
+        className="float1 absolute top-1/3 right-1/4 h-10 w-10 rounded-full bg-cyan-300 opacity-45"
         style={{ animationDelay: "4s" }}
       ></div>
       <div
-        className="absolute bottom-1/3 left-1/4 w-14 h-14 bg-purple-400 rounded-full opacity-40 float3"
+        className="float3 absolute bottom-1/3 left-1/4 h-14 w-14 rounded-full bg-purple-400 opacity-40"
         style={{ animationDelay: "6s" }}
       ></div>
       <div
-        className="absolute bottom-16 right-1/3 w-18 h-18 bg-indigo-500 rounded-full opacity-35 float4"
+        className="float4 absolute right-1/3 bottom-16 h-18 w-18 rounded-full bg-indigo-500 opacity-35"
         style={{ animationDelay: "1s" }}
       ></div>
 
+      {/* Large Floating Particles */}
       <div
-        className="absolute top-1/4 left-16 w-22 h-22 bg-blue-400 rounded-full opacity-30 float5"
+        className="float5 absolute top-1/4 left-16 h-22 w-22 rounded-full bg-blue-400 opacity-30"
         style={{ animationDelay: "3s" }}
       ></div>
       <div
-        className="absolute top-3/4 right-16 w-20 h-20 bg-purple-500 rounded-full opacity-35 float6"
+        className="float6 absolute top-3/4 right-16 h-20 w-20 rounded-full bg-purple-500 opacity-35"
         style={{ animationDelay: "5s" }}
       ></div>
       <div
-        className="absolute top-1/2 left-8 w-16 h-16 bg-indigo-300 rounded-full opacity-40 float1"
+        className="float1 absolute top-1/2 left-8 h-16 w-16 rounded-full bg-indigo-300 opacity-40"
         style={{ animationDelay: "7s" }}
       ></div>
       <div
-        className="absolute top-1/2 right-8 w-18 h-18 bg-violet-400 rounded-full opacity-35 float2"
+        className="float2 absolute top-1/2 right-8 h-18 w-18 rounded-full bg-violet-400 opacity-35"
         style={{ animationDelay: "8s" }}
       ></div>
 
+      {/* Small Floating Particles */}
       <div
-        className="absolute top-40 left-1/2 w-8 h-8 bg-blue-500 rounded-full opacity-50 float3"
+        className="float3 absolute top-40 left-1/2 h-8 w-8 rounded-full bg-blue-500 opacity-50"
         style={{ animationDelay: "1.5s" }}
       ></div>
       <div
-        className="absolute bottom-32 left-2/3 w-6 h-6 bg-purple-600 rounded-full opacity-45 float5"
+        className="float5 absolute bottom-32 left-2/3 h-6 w-6 rounded-full bg-purple-600 opacity-45"
         style={{ animationDelay: "2.5s" }}
       ></div>
       <div
-        className="absolute top-2/3 right-1/2 w-10 h-10 bg-indigo-600 rounded-full opacity-40 float6"
+        className="float6 absolute top-2/3 right-1/2 h-10 w-10 rounded-full bg-indigo-600 opacity-40"
         style={{ animationDelay: "3.5s" }}
       ></div>
 
-      <div className="bg-white/90 backdrop-blur-sm p-12 rounded-2xl shadow-2xl text-center max-w-md w-full border border-white/20 transform transition-all duration-500 hover:scale-105 relative">
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white px-6 py-2 rounded-full text-sm font-mono shadow-lg z-10 pulse-glow">
-          Error 404
+      {/* Main Content */}
+      <div className="relative w-full max-w-md transform rounded-2xl border border-white/20 bg-white/90 p-12 text-center shadow-2xl backdrop-blur-sm transition-all duration-500 hover:scale-105">
+        {/* Badge */}
+        <div className="pulse-glow absolute -top-4 left-1/2 z-10 -translate-x-1/2 transform rounded-full bg-indigo-500 px-6 py-2 font-mono text-sm text-white shadow-lg">
+          404 Not Found
         </div>
 
-        {/* Search/Question mark icon */}
-        <div className="mx-auto w-20 h-20 bg-linear-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mb-6 shadow-lg mt-4">
+        {/* Icon */}
+        <div className="mx-auto mt-4 mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-linear-to-br from-indigo-400 to-purple-500 shadow-lg">
           <svg
-            className="w-10 h-10 text-white"
+            className="h-10 w-10 text-white"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -78,11 +84,11 @@ export default function NotFoundPage() {
           </svg>
         </div>
 
-        <h1 className="text-4xl font-bold bg-linear-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
+        <h1 className="mb-4 bg-linear-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-4xl font-bold text-transparent">
           Page Not Found
         </h1>
 
-        <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+        <p className="mb-8 text-lg leading-relaxed text-gray-600">
           Oops! The page you&apos;re looking for doesn&apos;t exist. It might
           have been moved, deleted, or you entered the wrong URL.
         </p>
@@ -90,9 +96,9 @@ export default function NotFoundPage() {
         <div className="space-y-4">
           <Link
             href="/"
-            className="inline-block bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="inline-block transform rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-8 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-lg"
           >
-            🏠 Back to Home
+            Back to Home
           </Link>
         </div>
       </div>
