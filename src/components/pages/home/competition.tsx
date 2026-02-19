@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function CompetitionSection() {
   return (
     <div className="competition-wrapper relative flex w-screen flex-col items-center justify-start pb-[15%]">
-      <h1 className="competition-text font-family-gill-condensed-bold text-6xl font-extrabold">
+      <h1 className="competition-text font-family-gill-condensed-bold text-6xl font-extrabold text-black">
         COMPETITIONS
       </h1>
       <div className="competition-right-left-container mt-14 flex h-full w-full items-center justify-center gap-40">

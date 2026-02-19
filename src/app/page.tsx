@@ -1,4 +1,3 @@
-import "@/styles/home.css";
 import HomePage from "@/components/pages/home/home";
 import { getLatestActivities } from "@/services/activity";
 

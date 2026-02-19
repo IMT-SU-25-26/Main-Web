@@ -33,6 +33,10 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
           ".yellow-star-landing",
           ".green-spike-landing",
           ".green-arrow-landing",
+          ".blue-line-landing",
+          ".sobekan",
+          ".sobekan-biru-kiri",
+          ".sobekan-biru-kanan",
           ".among-us",
           ".dragon",
           ".crown",
@@ -89,6 +93,23 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
       // Hero Animations
       heroTl.to(
         [
+          ".blue-line-landing",
+          ".sobekan",
+          ".sobekan-biru-kiri",
+          ".sobekan-biru-kanan",
+        ],
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.05,
+          ease: "back.out(1.7)",
+        },
+      );
+
+      heroTl.to(
+        [
           ".red-bubble",
           ".yellow-bubble",
           ".front-bubble",
@@ -105,12 +126,12 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
           scale: 1,
           y: 0,
           duration: 0.8,
-          stagger: 0.04,
+          stagger: 0.05,
           ease: "back.out(1.7)",
         },
+        0,
       );
 
-      // Hero Animations
       heroTl.to(
         [
           ".red-spike-landing",
@@ -126,6 +147,7 @@ export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
           scale: 1,
           y: 0,
           duration: 0.8,
+          stagger: 0.05,
           ease: "back.out(1.7)",
         },
         0,

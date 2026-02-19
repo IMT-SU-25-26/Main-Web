@@ -1,3 +1,44 @@
+/* Pre Hide Elements */
+.about-us-text,
+.about-us-paper-cloud-mobile,
+.left-about-card,
+.su-imt-team-card-background,
+.su-imt-team-card-foreground,
+.dragon-about,
+.dragon-breath,
+.peniti,
+.circle-blue-stick-about,
+.circle-red-stick-about,
+.yellow-star-landing-about,
+.red-spike-landing-about,
+.big-fracture,
+.vision-card,
+.mission-card,
+.circle-kiri-fracture,
+.green-arrow-about,
+.pencil-ruler,
+.our-values-text,
+.step,
+.our-values-card-container,
+.about-footer-left-background,
+.about-footer-right-background,
+.about-laptop,
+.about-laptop-spark,
+.about-heart {
+  opacity: 0;
+}
+
+/* GPU-Accelerated Animation Targets */
+.left-about-card,
+.su-imt-team-card-background,
+.su-imt-team-card-foreground,
+.big-fracture,
+.vision-card,
+.mission-card,
+.our-values-card-container {
+  will-change: transform, opacity;
+}
+
 @media (max-width: 3840px) and (max-height: 2160px) {
   /* About us section */
   .left-about-card {
