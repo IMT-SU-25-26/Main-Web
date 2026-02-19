@@ -1,11 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const { globSync } = require("glob");
+// node scripts/audit.js
 
-const PUBLIC_DIR = path.join(process.cwd(), "public");
+import { readFileSync, existsSync, unlinkSync } from "fs";
+import { join, basename, parse, extname } from "path";
+import { globSync } from "glob";
+import readline from "readline";
+
+const PUBLIC_DIR = join(process.cwd(), "public");
 const IGNORE = ["node_modules", ".next", ".git"];
 
-console.log("🔍 Running Fuzzy Audit (Ignoring extensions)...");
+console.log("Running Fuzzy Audit (Ignoring extensions)...\n");
 
 const allAssets = globSync(`${PUBLIC_DIR}/**/*`, { nodir: true });
 
@@ -13,19 +16,19 @@ const sourceFiles = globSync(`**/*.{ts,tsx,js,jsx,css,scss}`, {
   ignore: IGNORE.map((d) => `${d}/**`),
 }).map((file) => ({
   path: file,
-  content: fs.readFileSync(file, "utf8"),
+  content: readFileSync(file, "utf8"),
 }));
 
 const unused = [];
 
 allAssets.forEach((assetPath) => {
-  const fileName = path.basename(assetPath); 
-  const nameWithoutExt = path.parse(fileName).name; 
+  const fileName = basename(assetPath);
+  const nameWithoutExt = parse(fileName).name;
 
   const relativePath = assetPath
     .replace(PUBLIC_DIR, "")
     .replace(/\\/g, "/")
-    .replace(path.extname(assetPath), "");
+    .replace(extname(assetPath), "");
 
   let isUsed = false;
 
@@ -49,28 +52,31 @@ if (unused.length > 0) {
   console.log(`\n❌ Found ${unused.length} potentially unused assets:`);
   unused.forEach((u) => console.log(`  - ${u}`));
 } else {
-  console.log("\n✅ No unused assets found.");
+  console.log("\nNo unused assets found.");
 }
 
 if (unused.length > 0) {
-  const readline = require('readline').createInterface({
+  const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
   });
 
-  readline.question(`Do you want to delete these ${unused.length} files? (y/n) `, (answer) => {
-    if (answer.toLowerCase() === 'y') {
-      unused.forEach(filePath => {
-        const fullPath = path.join(process.cwd(), filePath);
-        if (fs.existsSync(fullPath)) {
-          fs.unlinkSync(fullPath);
-          console.log(`Deleted: ${filePath}`);
-        }
-      });
-      console.log('Cleanup complete.');
-    } else {
-      console.log('Deletion cancelled.');
-    }
-    readline.close();
-  });
+  rl.question(
+    `\nDo you want to delete these ${unused.length} files? (y/n) \n`,
+    (answer) => {
+      if (String(answer).toLowerCase() === "y") {
+        unused.forEach((filePath) => {
+          const fullPath = join(process.cwd(), filePath);
+          if (existsSync(fullPath)) {
+            unlinkSync(fullPath);
+            console.log(`Deleted: ${filePath}`);
+          }
+        });
+        console.log("\nCleanup complete.");
+      } else {
+        console.log("\nDeletion cancelled.");
+      }
+      rl.close();
+    },
+  );
 }
