@@ -1,7 +1,5 @@
-"use client";
-
-import { authClient } from "@/lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
+import { authClient } from "@/lib/auth-client";
 
 export default function SignInButton() {
   const handleSignIn = async () => {

@@ -1,13 +1,13 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
-import { Session } from "@/types/auth";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import DesktopMenu from "./desktop-menu";
 import MobileMenu from "./mobile-menu";
 import HamburgerMenu from "./hamburger-menu";
+import { useState, useEffect } from "react";
+import { authClient } from "@/lib/auth-client";
+import { Session } from "@/types/auth";
 
 export default function NavigationBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,10 +30,10 @@ export default function NavigationBar() {
   };
 
   return (
-    <nav className="z-1000 fixed flex items-center px-4 sm:px-12 justify-between w-screen min-h-[6.5vh] bg-white border-b-2 border-[#E93400] text-black">
+    <nav className="fixed z-1000 flex min-h-[6.5vh] w-screen items-center justify-between border-b-2 border-[#E93400] bg-white px-4 text-black sm:px-12">
       <Link
         href="/"
-        className="w-9.5 sm:w-6 md:w-8 lg:w-9 xl:w-10.5 2xl:w-12 h-auto cursor-pointer"
+        className="h-auto w-9.5 cursor-pointer sm:w-6 md:w-8 lg:w-9 xl:w-10.5 2xl:w-12"
       >
         <Image
           src={"/images/layout/su-logo.svg"}

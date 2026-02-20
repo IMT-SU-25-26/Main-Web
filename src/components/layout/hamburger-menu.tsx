@@ -1,5 +1,3 @@
-"use client";
-
 interface HamburgerMenuProps {
   onClick: () => void;
 }

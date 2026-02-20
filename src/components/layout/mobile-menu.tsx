@@ -1,11 +1,11 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
-import { Session } from "@/types/auth";
-import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
 import Link from "next/link";
 import SignInButton from "./sign-in-button";
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { authClient } from "@/lib/auth-client";
+import { Session } from "@/types/auth";
 
 interface MobileMenuProps {
   session: Session | null;

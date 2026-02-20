@@ -1,10 +1,8 @@
-"use client";
-
-import { authClient } from "@/lib/auth-client";
-import { Session } from "@/types/auth";
 import Link from "next/link";
 import Image from "next/image";
 import SignInButton from "./sign-in-button";
+import { authClient } from "@/lib/auth-client";
+import { Session } from "@/types/auth";
 
 interface DesktopMenuProps {
   session: Session | null;
