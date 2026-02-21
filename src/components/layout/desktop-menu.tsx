@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import SignInButton from "./sign-in-button";
+import SignInButton from "../ui/sign-in-button";
 import { authClient } from "@/lib/auth-client";
 import { Session } from "@/types/auth";
 

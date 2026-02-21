@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import SignInButton from "./sign-in-button";
+import SignInButton from "../ui/sign-in-button";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { authClient } from "@/lib/auth-client";
