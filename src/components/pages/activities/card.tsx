@@ -1,65 +1,44 @@
-"use client";
-
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { Activity } from "@prisma/client";
-import Link from "next/link";
-import ApplyButton from "../utils/ApplyButton";
-import { useState, useEffect } from "react";
-import { getApprovedApplicationsCount } from "@/lib/service/activity";
+import CardClient from "./card-client";
+import ApplyButton from "@/components/ui/apply-button";
+import { Activity, Image as PrismaImage } from "@/generated/prisma/client";
+import { getSession } from "@/lib/auth-server";
+import {
+  getApprovedApplicationsCount,
+  getApplicationStatus,
+} from "@/services/application";
+import { colorList } from "@/utils/color-list";
 
-const colorList = [
-  "#ED4E45", // Red
-  "#118D25", // Green
-  "#F64A78", // Pink
-  "#0555AB", // Blue
-  "#F7C235", // Yellow
-  "#CCBCAF", // Gray
-];
-
-type ActivityCardProps = {
-  activity: Activity;
+interface ActivityCardProps {
+  activity: Activity & { images?: PrismaImage[] };
   index: number;
   className?: string;
-  confirmApply?: (onConfirm: () => Promise<void>) => void;
   category: string;
-};
+}
 
-export const ActivityCard = ({
+export default async function ActivityCard({
   activity,
   index,
   className,
-  confirmApply,
   category,
-}: ActivityCardProps) => {
+}: ActivityCardProps) {
   const accentColor = colorList[index % colorList.length];
-  const [swinging, setSwinging] = useState(false);
-  const pathname = usePathname();
   const description = activity.description;
   const trimmedDescription =
     description.length > 75 ? description.slice(0, 75) + "..." : description;
 
-  const [approvedCount, setApprovedCount] = useState<number>(0);
+  const session = await getSession();
+  const userId = session?.user?.id;
 
-  useEffect(() => {
-    const fetchApprovedCount = async () => {
-      const count = await getApprovedApplicationsCount(activity.id);
-      setApprovedCount(count);
-    };
-    fetchApprovedCount();
-  }, [activity.id]);
+  const [approvedCount, applicationStatus] = await Promise.all([
+    getApprovedApplicationsCount(activity.id),
+    userId
+      ? getApplicationStatus(activity.id, userId)
+      : Promise.resolve(undefined),
+  ]);
 
   return (
-    <Link
-      href={`${pathname.replace(/\/$/, "")}/${activity.id}`}
-      onMouseLeave={() => {
-        setSwinging(true);
-        setTimeout(() => setSwinging(false), 700); // match swing duration (in global.css ; .swing-effect)
-      }}
-      className={`relative mt-8 flex h-[430px] w-[330px] transform flex-col rounded-xl border-[1px] border-gray-200 bg-white px-4 py-4 text-left shadow-[5px_5px_10px_rgba(0,0,0,0.1)] transition-all duration-300 hover:origin-top hover:rotate-[1.5deg] sm:w-[360px] ${
-        swinging ? "swing-effect" : ""
-      } ${className}`}
-    >
+    <CardClient activityId={activity.id} className={className}>
       {/* Paper Clip */}
       <div className="absolute -top-6 left-1/2 z-10 -translate-x-1/2">
         <Image src="/activities/tape.svg" alt="tape" width={80} height={80} />
@@ -68,7 +47,7 @@ export const ActivityCard = ({
       <div className="mb-2 h-50 w-full overflow-hidden rounded-lg sm:h-55">
         {/* Activity Image */}
         <Image
-          src={activity.imageUrl || "/placeholder/placeholder.png"}
+          src={activity.images?.[0]?.url || "/placeholder/placeholder.png"}
           alt={activity.title}
           width={360}
           height={144}
@@ -83,7 +62,7 @@ export const ActivityCard = ({
             {activity.title}
             <p
               style={{ background: accentColor }}
-              className={`font-family-impact ml-4 inline px-4 py-[4px] text-[0.9rem] font-light tracking-wider text-white`}
+              className={`font-family-impact ml-4 inline px-4 py-1 text-[0.9rem] font-light tracking-wider text-white`}
             >
               {category}
             </p>
@@ -148,7 +127,7 @@ export const ActivityCard = ({
         {/* Quota */}
         <div className="flex flex-col items-center justify-center">
           <svg
-            className="h-[25px] w-[25px] text-gray-600"
+            className="h-6.25 w-6.25 text-gray-600"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -161,7 +140,7 @@ export const ActivityCard = ({
       </div>
 
       {/* Description */}
-      <p className="font-gill mt-2 mb-2 w-full text-[12px] break-words text-black">
+      <p className="font-gill mt-2 mb-2 w-full text-[12px] wrap-break-word text-black">
         {trimmedDescription}
       </p>
 
@@ -170,13 +149,15 @@ export const ActivityCard = ({
         bgColor={accentColor}
         className="relative mt-auto w-full py-2"
         activityId={activity.id}
-        confirmApply={confirmApply}
-        startDate={activity.startDate}
+        startDate={new Date(activity.startDate)}
         quota={activity.quota}
         approvedCount={approvedCount}
+        initialApplicationStatus={applicationStatus}
+        isLoggedIn={!!session}
+        userId={userId}
       >
         Register
       </ApplyButton>
-    </Link>
+    </CardClient>
   );
-};
+}

@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { signIn, useSession } from "next-auth/react";
-import {
-  createApplication,
-  getApplicationStatus,
-} from "@/services/application";
+import React, { useState } from "react";
+import { authClient } from "@/lib/auth-client";
+import { createApplication } from "@/services/application";
 
-type ButtonProps = {
+interface ButtonProps {
   bgColor: string;
   children: React.ReactNode;
   className?: string;
@@ -16,7 +13,10 @@ type ButtonProps = {
   startDate?: Date;
   quota?: number;
   approvedCount?: number;
-};
+  initialApplicationStatus?: string;
+  isLoggedIn?: boolean;
+  userId?: string;
+}
 
 export default function ApplyButton({
   bgColor,
@@ -27,57 +27,59 @@ export default function ApplyButton({
   startDate,
   quota,
   approvedCount,
+  initialApplicationStatus,
+  isLoggedIn,
+  userId,
 }: ButtonProps) {
-  const { data: session, status } = useSession();
   const [applicationStatus, setApplicationStatus] = useState<
     string | undefined
-  >(undefined);
+  >(initialApplicationStatus);
 
-  useEffect(() => {
-    async function fetchStatus() {
-      if (session) {
-        const status = await getApplicationStatus(activityId, session.user.id);
-        setApplicationStatus(status);
-      }
-    }
-    fetchStatus();
-  }, [session, activityId]);
-
-  const handleApply = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-
-    // Prevent application if activity has passed or quota is full
-    if (isActivityPassed || isQuotaFull) {
-      return;
-    }
-
-    if (!session?.user?.id) {
-      signIn("google");
-      return;
-    }
-
-    if (!applicationStatus) {
-      confirmApply?.(async () => {
-        // prevent multiple applications
-        const result = await createApplication(session.user.id, activityId);
-        if (result.success) {
-          setApplicationStatus("PENDING");
-        } else {
-          alert(`Error: ${result.error}`);
-        }
-      });
-    }
-  };
-
-  let childrenTemp = children;
   const now = new Date();
   const isActivityPassed = startDate ? new Date(startDate) < now : false;
   const isQuotaFull =
     quota && approvedCount !== undefined ? approvedCount >= quota : false;
 
-  if (status === "loading") {
-    childrenTemp = "Loading...";
-  } else if (!session) {
+  const handleApply = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (isActivityPassed || isQuotaFull) {
+      return;
+    }
+
+    if (!isLoggedIn || !userId) {
+      authClient.signIn.social({ provider: "google" });
+      return;
+    }
+
+    if (!applicationStatus) {
+      const apply = async () => {
+        // prevent multiple applications
+        const result = await createApplication({
+          userId,
+          activityId,
+          status: "PENDING",
+        });
+        if (result.success) {
+          setApplicationStatus("PENDING");
+        } else {
+          alert(`Error: ${result.error}`);
+        }
+      };
+
+      if (confirmApply) {
+        confirmApply(apply);
+      } else {
+        if (window.confirm("Are you sure you want to apply for this activity?")) {
+          await apply();
+        }
+      }
+    }
+  };
+
+  let childrenTemp = children;
+
+  if (!isLoggedIn) {
     childrenTemp = "Please Log In to Apply";
   } else if (isActivityPassed) {
     childrenTemp = "Activity Has Ended";

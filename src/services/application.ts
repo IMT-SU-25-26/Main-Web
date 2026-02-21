@@ -16,6 +16,15 @@ export async function getApplicationStatus(activityId: string, userId: string) {
   return application?.status;
 }
 
+export async function getApprovedApplicationsCount(activityId: string) {
+  return await prisma.application.count({
+    where: {
+      activityId,
+      status: "APPROVED",
+    },
+  });
+}
+
 export async function createApplication(
   data: z.infer<typeof ApplicationSchema>,
 ) {

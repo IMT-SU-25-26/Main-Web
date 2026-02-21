@@ -1,0 +1,10 @@
+/* Swing Effect */
+.swing-hover:hover {
+  animation: swing 0.7s ease-in-out;
+  transform-origin: top center;
+}
+
+.swing-effect {
+  animation: swing 0.7s ease-in-out;
+  transform-origin: top center;
+}
