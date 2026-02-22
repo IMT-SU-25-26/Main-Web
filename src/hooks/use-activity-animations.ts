@@ -2,7 +2,10 @@ import { RefObject } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-export const useActivityAnimations = (bgRef: RefObject<HTMLDivElement | null>) => {
+export const useActivityAnimations = (
+  bgRef: RefObject<HTMLDivElement | null>,
+  searchRef: RefObject<HTMLDivElement | null>,
+) => {
   useGSAP(
     () => {
       gsap.fromTo(
@@ -47,5 +50,24 @@ export const useActivityAnimations = (bgRef: RefObject<HTMLDivElement | null>) =
       });
     },
     { scope: bgRef },
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".start-bottom",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0,
+          ease: "power1.out",
+          stagger: 0.1,
+          clearProps: "transform",
+        },
+      );
+    },
+    { scope: searchRef },
   );
 };

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import ActivityBackground from "./ActivityBackground";
+import ActivityBackground from "./background";
 import ActivitiesSearch from "./ActivitiesSearch";
+import { useState, useEffect } from "react";
 import { Activity, Category } from "@prisma/client";
 import { useSession } from "next-auth/react";
 import { getUserById } from "@/lib/service/user";

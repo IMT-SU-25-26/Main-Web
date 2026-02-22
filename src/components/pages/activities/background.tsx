@@ -1,16 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { useActivityAnimations } from "@/hooks/use-activity-animations";
 
 const ActivityBackground = () => {
-  const bgRef = useRef<HTMLDivElement>(null);
-
-  useActivityAnimations(bgRef);
-
   return (
-    <div ref={bgRef}>
+    <>
       {/* Pin */}
       <div className="relative z-10 inline-block">
         <Image
@@ -79,7 +73,7 @@ const ActivityBackground = () => {
         height={500}
         draggable={false}
       />
-    </div>
+    </>
   );
 };
 
