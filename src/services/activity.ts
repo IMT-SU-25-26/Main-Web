@@ -82,6 +82,7 @@ export async function updateActivity(
 
   try {
     const updateData: Record<string, unknown> = { ...activityData };
+    
     if (images !== undefined) {
       updateData.images = { deleteMany: {}, create: images };
     }

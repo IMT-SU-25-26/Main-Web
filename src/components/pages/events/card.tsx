@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface EventsCardProps {
+interface EventCardProps {
   title: string;
   date: string;
   isreverse?: boolean;
@@ -11,7 +11,7 @@ interface EventsCardProps {
   isComingSoon?: boolean;
 }
 
-export default function EventsCard({
+export default function EventCard({
   title,
   date,
   isreverse,
@@ -19,7 +19,7 @@ export default function EventsCard({
   islast,
   eventId,
   isComingSoon,
-}: EventsCardProps) {
+}: EventCardProps) {
   return (
     <div className="relative mx-auto min-h-100 w-[90%] max-w-4xl rounded-md bg-[#f4f4f4] bg-cover p-6 shadow-md sm:min-h-80">
       {/* Card Content */}

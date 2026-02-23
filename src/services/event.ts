@@ -13,7 +13,13 @@ export async function getAllEvents() {
     select: {
       id: true,
       title: true,
-      startDate: true,  
+      startDate: true,
+      images: {
+        take: 1,
+        select: {
+          url: true,
+        },
+      },
     },
   });
 }
@@ -66,6 +72,7 @@ export async function updateEvent(
 
   try {
     const updateData: Record<string, unknown> = { ...eventData };
+    
     if (images !== undefined) {
       updateData.images = { deleteMany: {}, create: images };
     }
