@@ -2,7 +2,7 @@ import { RefObject } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-export const useActivityAnimations = (
+export const useActivitiesAnimations = (
   bgRef: RefObject<HTMLDivElement | null>,
   searchRef: RefObject<HTMLDivElement | null>,
 ) => {
