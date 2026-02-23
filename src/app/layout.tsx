@@ -28,8 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavigationBar />
-        {children}
+        <div className="bg-[#F1EEE6] bg-[url('/images/layout/background.png')] bg-contain bg-center">
+          <NavigationBar />
+          {children}
+        </div>
       </body>
     </html>
   );

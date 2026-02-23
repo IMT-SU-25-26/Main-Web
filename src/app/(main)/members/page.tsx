@@ -23,7 +23,7 @@ export default function Members() {
       <div className="h-[6vh] bg-[#F1EEE6]"></div>
       <div
         ref={containerRef}
-        className="flex min-h-screen w-screen max-w-screen flex-col items-center overflow-hidden bg-[#F1EEE6] bg-[url('/images/layout/background.png')] bg-contain bg-center pb-20"
+        className="flex min-h-screen w-screen max-w-screen flex-col items-center overflow-hidden pb-20"
       >
         <Title />
         <HOD />

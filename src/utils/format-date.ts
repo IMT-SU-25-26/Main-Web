@@ -1,11 +1,15 @@
-export function formatDate<T extends object>(
+export function formatDate<T extends object, K extends keyof T>(
   obj: T,
-  field: keyof T | string = "date"
+  field: K,
 ): string {
-  const value = (obj as any)[field as string];
-  if (!value) return "";
-  const date = new Date(String(value));
+  const value = obj[field];
+
+  if (value === null || value === undefined) return "";
+
+  const date = new Date(value as unknown as string | number | Date);
+
   if (Number.isNaN(date.getTime())) return "";
+
   return date
     .toLocaleDateString("en-GB", {
       day: "numeric",

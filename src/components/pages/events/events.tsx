@@ -21,24 +21,29 @@ interface EventsClientProps {
 
 export default function EventsPage({ events }: EventsClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+
   useEventsAnimation(containerRef);
 
   return (
-    <div className="w-full overflow-hidden" ref={containerRef}>
+    <div className="overflow-hidden">
       <div className="h-[6vh] bg-[#F1EEE6]"></div>
-      <div className="flex flex-col gap-15 items-center min-h-screen w-full bg-[url('/backgrounds/background-paper.png')] bg-contain bg-center bg-[#F1EEE6] overflow-hidden pb-28">
+
+      <div
+        ref={containerRef}
+        className="flex min-h-screen w-full flex-col items-center gap-15 overflow-hidden pb-28"
+      >
         <EventHeader />
-        
+
         {/* Card Section */}
         {events.map((event, index) => {
           const isReverse = index % 2 !== 0;
           const isLast = index === events.length - 1;
           const isComingSoon = new Date(event.startDate) > new Date();
-          
-          const formattedDate = formatDate(event, 'startDate');
+
+          const formattedDate = formatDate(event, "startDate");
 
           return (
-            <div key={event.id} className="section-reveal w-full relative">
+            <div key={event.id} className="section-reveal relative w-full">
               <EventBackground index={index} />
 
               <div className="relative z-10">
@@ -57,7 +62,7 @@ export default function EventsPage({ events }: EventsClientProps) {
         })}
 
         {events.length === 0 && (
-          <div className="section-reveal w-full relative">
+          <div className="section-reveal relative w-full">
             <EventBackground index={0} />
             <div className="relative z-10">
               <EventCard

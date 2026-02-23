@@ -1,8 +1,8 @@
+import EventsPage from "@/components/pages/events/events";
 import { getAllEvents } from "@/services/event";
-import EventsClient from "./client";
 
-export default async function EventsPage() {
+export default async function Events() {
   const events = await getAllEvents();
 
-  return <EventsClient events={events} />;
+  return <EventsPage events={events} />;
 }
