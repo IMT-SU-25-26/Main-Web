@@ -11,14 +11,16 @@ export default function FooterSection() {
           width={1920}
           height={1080}
           alt="footer"
+          loading="lazy"
         />
         <Image
           className="yellow-spike-right absolute -top-80 right-0 h-auto w-[15%]"
-          src={"/images/pages/home/yellow-spike-right.png"}
+          src={"/images/pages/home/yellow-spike-right.webp"}
           draggable="false"
           width={1920}
           height={1080}
           alt="footer"
+          loading="lazy"
         />
       </div>
 

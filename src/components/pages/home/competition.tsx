@@ -14,17 +14,19 @@ export default function CompetitionSection() {
               <div className="mobile-competition-content relative z-25 flex h-full w-full flex-col items-center justify-center p-4">
                 <Image
                   className="competition-mobile-handle absolute -top-16 left-[45%] w-18 rotate-90"
-                  src={"/images/pages/home/handle-card.png"}
+                  src={"/images/pages/home/handle-card.webp"}
                   width={500}
                   height={500}
                   alt="handle-card"
+                  loading="lazy"
                 />
                 <Image
                   className="competition-mobile-star absolute -top-18 right-[-8%] w-30"
-                  src={"/images/pages/home/star-card.png"}
+                  src={"/images/pages/home/star-card.webp"}
                   width={500}
                   height={500}
                   alt="star-card"
+                  loading="lazy"
                 />
                 <div className="image-mobile-container h-22 w-full bg-[url('/images/pages/home/comp.jpg')] bg-cover bg-no-repeat"></div>
                 <h1 className="competition-mobile-title-text font-family-impact w-full text-left text-2xl text-black">
@@ -47,6 +49,7 @@ export default function CompetitionSection() {
             width={500}
             height={500}
             alt="round-spike"
+            loading="lazy"
           />
           <Image
             className="compete-bg relative h-auto w-[85%]"
@@ -54,6 +57,7 @@ export default function CompetitionSection() {
             width={500}
             height={500}
             alt="background-compete"
+            loading="lazy"
           />
           <Image
             className="absolute top-0 left-5 z-10 hidden h-auto w-full sm:flex"
@@ -62,6 +66,7 @@ export default function CompetitionSection() {
             width={500}
             height={500}
             alt="competition-left"
+            loading="lazy"
           />
           <Image
             className="light-bulp absolute top-[-60%] left-0 z-10 hidden h-auto w-[35%] sm:flex"
@@ -70,6 +75,7 @@ export default function CompetitionSection() {
             width={500}
             height={500}
             alt="competition-left"
+            loading="lazy"
           />
           <div className="join-now-text-container absolute bottom-[-5%] left-[47.5%] z-2 h-30 w-87.5 rounded-2xl bg-[#0E54B2] p-4 px-8">
             <div className="absolute top-[-10%] left-[5%] z-[-1] flex h-full w-full items-center justify-center rounded-2xl bg-[#ED427C]">
@@ -83,17 +89,19 @@ export default function CompetitionSection() {
           <div className="competition-right-background relative z-2 flex h-110 w-160 rotate-[-2.5deg] flex-col gap-4 bg-white p-4 shadow-[12px_12px_5px_-5px_rgba(0,0,0,0.25)]">
             <Image
               className="competition-right-handle absolute top-[-25%] right-[40%] w-30 rotate-90"
-              src={"/images/pages/home/handle-card.png"}
+              src={"/images/pages/home/handle-card.webp"}
               width={500}
               height={500}
               alt="handle-card"
+              loading="lazy"
             />
             <Image
               className="competition-star absolute top-[-15%] right-[-8%] w-40"
-              src={"/images/pages/home/star-card.png"}
+              src={"/images/pages/home/star-card.webp"}
               width={500}
               height={500}
               alt="star-card"
+              loading="lazy"
             />
             <Image
               className="round-spike absolute right-[75%] bottom-[-30%] w-[40%]"
@@ -101,6 +109,7 @@ export default function CompetitionSection() {
               width={500}
               height={500}
               alt="round-spike"
+              loading="lazy"
             />
             <div className="image-container h-1/2 w-full bg-gray-300 bg-[url('/images/pages/home/comp.jpg')] bg-cover bg-no-repeat"></div>
             <h1 className="competition-title-text font-family-impact text-4xl text-black">
@@ -121,6 +130,7 @@ export default function CompetitionSection() {
             width={500}
             height={500}
             alt="round-spike"
+            loading="lazy"
           />
         </div>
       </div>
@@ -130,6 +140,7 @@ export default function CompetitionSection() {
         width={900}
         height={900}
         className="green-line absolute top-[-45%] right-[-10%] w-[40%]"
+        loading="lazy"
       />
     </div>
   );

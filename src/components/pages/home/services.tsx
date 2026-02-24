@@ -104,22 +104,25 @@ export default function ServicesSection({
         width={1920}
         height={1080}
         alt="footer"
+        loading="lazy"
       />
       <Image
         className="green-arrow-footer absolute top-0 right-0 h-auto w-[15%]"
-        src={"/images/pages/home/green-arrow-home.png"}
+        src={"/images/pages/home/green-arrow-home.webp"}
         draggable="false"
         width={1920}
         height={1080}
         alt="footer"
+        loading="lazy"
       />
       <Image
         className="red-star-footer-left absolute top-[35%] left-0 hidden h-auto w-[20%] sm:flex"
-        src={"/images/pages/home/orange-star-footer-left.png"}
+        src={"/images/pages/home/orange-star-footer-left.webp"}
         draggable="false"
         width={1920}
         height={1080}
         alt="footer"
+        loading="lazy"
       />
     </div>
   );

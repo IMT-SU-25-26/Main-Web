@@ -32,6 +32,7 @@ export default function ServiceCard({
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"
+            loading="lazy"
           />
         )}
         <div
@@ -54,12 +55,13 @@ export default function ServiceCard({
         </p>
       </div>
       <Image
-        src="/images/pages/home/sobekan-community-service.png"
+        src="/images/pages/home/sobekan-community-service.webp"
         alt="Service Image"
         width={1000}
         height={1000}
         draggable={false}
         className="absolute bottom-[-7.5%] left-0 z-20"
+        loading="lazy"
       />
     </div>
   );
