@@ -30,6 +30,15 @@ export async function getEventById(eventId: string) {
   });
 }
 
+export async function getEventImages(eventId: string) {
+  return await prisma.image.findMany({
+    where: { eventId },
+    select: {
+      url: true,
+    },
+  });
+}
+
 export async function createEvent(data: z.infer<typeof EventSchema>) {
   const result = EventSchema.safeParse(data);
 

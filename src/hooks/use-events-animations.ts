@@ -75,3 +75,38 @@ export const useEventsAnimation = (
     { scope: containerRef },
   );
 };
+
+export const useCarouselAnimation = (
+  slidesRef: RefObject<HTMLDivElement | null>,
+  images: { url: string }[],
+) => {
+  useGSAP(
+    () => {
+      const slidesContainer = slidesRef.current;
+      if (!slidesContainer || images.length === 0) return;
+
+      gsap.killTweensOf(slidesContainer);
+
+      const slideWidth = 408; // 400px + 8px Gap
+      const totalSlides = images.length;
+      const durationPerSlide = 3;
+
+      gsap.set(slidesContainer, { x: 0, force3D: true });
+
+      gsap.to(slidesContainer, {
+        x: -slideWidth * totalSlides,
+        duration: durationPerSlide * totalSlides,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+          x: (x) => {
+            const totalWidth = slideWidth * totalSlides;
+            return (parseFloat(x) % totalWidth) + "px";
+          },
+        },
+        force3D: true,
+      });
+    },
+    { dependencies: [images] },
+  );
+};
