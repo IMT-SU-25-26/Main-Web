@@ -87,7 +87,7 @@ export default function EventCard({
             <h1 className="font-family-impact text-3xl text-black md:text-4xl">
               {title}
             </h1>
-            <p className="text-base font-semibold tracking-wider md:text-lg">
+            <p className="text-base font-semibold tracking-wider text-black md:text-lg">
               {date}
             </p>
           </div>

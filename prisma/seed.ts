@@ -205,9 +205,62 @@ export async function main() {
     skipDuplicates: true,
   });
 
+  // Seed Events
+  const eventData = [
+    {
+      title: "IMT Pulse",
+      description:
+        "Step into the Pulse of Informatics!\nIMT Pulse merupakan sebuah magang di Student Union Informatika, di sini skill komunikasi, critical thinking, dan kepemimpinan kalian akan diasah selama 1 periode! Selain itu, kalian juga akan mengembangkan komunikasi tim serta keterampilan teknis yang banyak digunakan di kehidupan kalian, sehingga siap menghadapi tantangan dunia kuliah, organisasi, maupun profesional. \nRasakan pengalaman berorganisasi sejak Semester 1!",
+      startDate: new Date("2025-08-21T09:00:00Z"),
+      images: [
+        { url: "/images/pages/event/pulse/Carousel-1.jpg", publicId: "pulse_carousel_1" },
+        { url: "/images/pages/event/pulse/Carousel-2.jpg", publicId: "pulse_carousel_2" },
+        { url: "/images/pages/event/pulse/Carousel-3.jpg", publicId: "pulse_carousel_3" },
+        { url: "/images/pages/event/pulse/Carousel-4.jpg", publicId: "pulse_carousel_4" },
+      ],
+    },
+    {
+      title: "Technocamp",
+      description:
+        "Technocamp adalah bootcamp intensif yang dirancang untuk mengembangkan skill programming dan teknologi terkini. Peserta akan belajar langsung dari industry expert melalui hands-on workshop, mentoring session, dan project-based learning. Cocok untuk pemula yang ingin terjun ke dunia tech.",
+      startDate: new Date("2025-10-21T09:00:00Z"),
+      images: [
+        {
+          url: "/images/pages/event/technocamp/Carousel-1.jpg",
+          publicId: "technocamp_carousel_1",
+        },
+        {
+          url: "/images/pages/event/technocamp/Carousel-2.jpg",
+          publicId: "technocamp_carousel_2",
+        },
+        {
+          url: "/images/pages/event/technocamp/Carousel-3.jpg",
+          publicId: "technocamp_carousel_3",
+        },
+        {
+          url: "/images/pages/event/technocamp/Carousel-4.jpg",
+          publicId: "technocamp_carousel_4",
+        },
+      ],
+    },
+  ];
+
+  let eventCount = 0;
+  for (const { images, ...event } of eventData) {
+    await prisma.event.create({
+      data: {
+        id: randomUUID(),
+        ...event,
+        images: { create: images },
+      },
+    });
+    eventCount++;
+  }
+
   console.log(`Created ${activities.count} activities`);
   console.log(`Created ${achievements.count} achievements`);
   console.log(`Created ${competitions.count} competitions`);
+  console.log(`Created ${eventCount} events`);
   console.log("Seeding completed!");
 }
 
