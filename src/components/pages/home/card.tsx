@@ -33,6 +33,7 @@ export default function ServiceCard({
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"
             loading="lazy"
+            decoding="async"
           />
         )}
         <div
@@ -62,6 +63,7 @@ export default function ServiceCard({
         draggable={false}
         className="absolute bottom-[-7.5%] left-0 z-20"
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

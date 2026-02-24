@@ -11,7 +11,7 @@ export default function UnionSection() {
         width={1920}
         height={1080}
         alt="sobekan"
-        loading="lazy"
+        fetchPriority="high"
       />
       <Image
         className="sobekan absolute bottom-0 left-0 z-1 flex h-full w-full sm:hidden"
@@ -20,7 +20,7 @@ export default function UnionSection() {
         width={1920}
         height={1080}
         alt="sobekan"
-        loading="lazy"
+        fetchPriority="high"
       />
       <h1 className="what-is-su-imt-text font-family-impact relative z-10 mt-[-10%] text-6xl font-bold text-white">
         WHAT IS SU IMT
@@ -47,6 +47,7 @@ export default function UnionSection() {
         height={376}
         alt="circle-stick-left"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="circle-on-stick laptop-on-stick absolute top-[27.5%] left-0 z-3 hidden w-1/5 sm:flex"
@@ -56,6 +57,7 @@ export default function UnionSection() {
         height={376}
         alt="circle-stick-left"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="book-laptop absolute top-[42.5%] left-0 z-2 hidden w-[22.5%] sm:flex"
@@ -65,6 +67,7 @@ export default function UnionSection() {
         height={376}
         alt="book-laptop"
         loading="lazy"
+        decoding="async"
       />
 
       <Image
@@ -75,6 +78,7 @@ export default function UnionSection() {
         height={376}
         alt="camera"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="circle-background absolute top-[27.5%] right-0 z-1 hidden w-1/5 sm:flex"
@@ -84,6 +88,7 @@ export default function UnionSection() {
         height={376}
         alt="circle-foreground"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="circle-foreground absolute top-[23.5%] -right-4 z-1 hidden w-1/5 sm:flex"
@@ -93,6 +98,7 @@ export default function UnionSection() {
         height={376}
         alt="circle-background"
         loading="lazy"
+        decoding="async"
       />
 
       <Image
@@ -103,6 +109,7 @@ export default function UnionSection() {
         height={376}
         alt="sobekan-left"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="sobekan-biru-kanan absolute top-[-22.5%] -right-[5%] z-0 w-[32.5%] rotate-y-180"
@@ -112,6 +119,7 @@ export default function UnionSection() {
         height={376}
         alt="sobekan-right"
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

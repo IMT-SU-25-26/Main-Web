@@ -10,6 +10,7 @@ export default function HeroSection() {
         width={924}
         height={560}
         alt="red-bubble"
+        fetchPriority="high"
       />
       <Image
         className="dragon absolute bottom-16 -left-48 z-9 h-auto w-48"
@@ -18,6 +19,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="dragon"
+        fetchPriority="high"
       />
       <Image
         className="yellow-star-landing absolute top-1/3 -left-6 z-9 h-auto w-40"
@@ -26,6 +28,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="yellow-star-landing"
+        fetchPriority="high"
       />
       <Image
         className="green-spike-landing absolute top-0 left-0 z-9 h-auto w-60"
@@ -34,6 +37,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="green-spike-landing"
+        fetchPriority="high"
       />
       <Image
         className="crown absolute top-17 right-18 z-9 h-auto w-32"
@@ -42,6 +46,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="crown"
+        fetchPriority="high"
       />
       <Image
         className="blue-line-landing absolute -top-15 -right-18 z-9 h-auto w-80"
@@ -50,6 +55,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="blue-line-landing"
+        fetchPriority="high"
       />
       <Image
         className="red-spike-landing absolute -right-[12.5%] bottom-[25%] z-9 h-auto w-90"
@@ -58,6 +64,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="red-spike-landing"
+        fetchPriority="high"
       />
       <Image
         className="green-arrow-landing absolute -right-2.5 bottom-5 z-9 h-auto w-60"
@@ -66,6 +73,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="green-arrow-landing"
+        fetchPriority="high"
       />
       <Image
         className="among-us absolute -right-48 bottom-16 z-9 h-auto w-32"
@@ -74,6 +82,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="mid-bubble"
+        fetchPriority="high"
       />
       <Image
         className="yellow-bubble absolute top-24 left-20 z-9"
@@ -82,6 +91,7 @@ export default function HeroSection() {
         width={628}
         height={380}
         alt="mid-bubble"
+        fetchPriority="high"
       />
       <Image
         className="front-bubble absolute top-30 left-32 z-10"
@@ -90,6 +100,7 @@ export default function HeroSection() {
         width={547}
         height={334}
         alt="front-bubble"
+        fetchPriority="high"
       />
       <Image
         className="welcome absolute top-34 left-56 z-10"
@@ -98,6 +109,7 @@ export default function HeroSection() {
         width={324.6}
         height={193.7}
         alt="su-welcome"
+        fetchPriority="high"
       />
       <Image
         className="demon-cat absolute top-50 left-38 z-10"
@@ -106,6 +118,7 @@ export default function HeroSection() {
         width={71}
         height={67}
         alt="demon-cat"
+        fetchPriority="high"
       />
       <Image
         className="stars-left absolute top-66 left-44 z-10"
@@ -114,6 +127,7 @@ export default function HeroSection() {
         width={45}
         height={37}
         alt="stars-left"
+        fetchPriority="high"
       />
       <Image
         className="stars-right absolute top-42 right-80 z-10"
@@ -122,6 +136,7 @@ export default function HeroSection() {
         width={45}
         height={37}
         alt="stars-right"
+        fetchPriority="high"
       />
       <Image
         className="to-text absolute top-60 left-[40.75%] z-10"
@@ -130,6 +145,7 @@ export default function HeroSection() {
         width={36.8}
         height={72.9}
         alt="to"
+        fetchPriority="high"
       />
       <Image
         className="su-imt-text absolute top-62 right-76 z-10"
@@ -138,6 +154,7 @@ export default function HeroSection() {
         width={426.5}
         height={126}
         alt="stars-right"
+        fetchPriority="high"
       />
       <Image
         className="title-background absolute right-76 z-10"
@@ -146,6 +163,7 @@ export default function HeroSection() {
         width={426.5}
         height={126}
         alt="stars-right"
+        fetchPriority="high"
       />
     </div>
   );

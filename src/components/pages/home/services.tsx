@@ -82,6 +82,7 @@ export default function ServicesSection({
               description="No activities available at the moment"
               color="#0555AB"
               opacity="75%"
+              
             />
           </>
         )}
@@ -105,6 +106,7 @@ export default function ServicesSection({
         height={1080}
         alt="footer"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="green-arrow-footer absolute top-0 right-0 h-auto w-[15%]"
@@ -114,6 +116,7 @@ export default function ServicesSection({
         height={1080}
         alt="footer"
         loading="lazy"
+        decoding="async"
       />
       <Image
         className="red-star-footer-left absolute top-[35%] left-0 hidden h-auto w-[20%] sm:flex"
@@ -123,6 +126,7 @@ export default function ServicesSection({
         height={1080}
         alt="footer"
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

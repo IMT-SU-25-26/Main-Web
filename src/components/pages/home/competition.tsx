@@ -19,6 +19,7 @@ export default function CompetitionSection() {
                   height={500}
                   alt="handle-card"
                   loading="lazy"
+                  decoding="async"
                 />
                 <Image
                   className="competition-mobile-star absolute -top-18 right-[-8%] w-30"
@@ -27,6 +28,7 @@ export default function CompetitionSection() {
                   height={500}
                   alt="star-card"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="image-mobile-container h-22 w-full bg-[url('/images/pages/home/comp.jpg')] bg-cover bg-no-repeat"></div>
                 <h1 className="competition-mobile-title-text font-family-impact w-full text-left text-2xl text-black">
@@ -50,6 +52,7 @@ export default function CompetitionSection() {
             height={500}
             alt="round-spike"
             loading="lazy"
+            decoding="async"
           />
           <Image
             className="compete-bg relative h-auto w-[85%]"
@@ -58,6 +61,7 @@ export default function CompetitionSection() {
             height={500}
             alt="background-compete"
             loading="lazy"
+            decoding="async"
           />
           <Image
             className="absolute top-0 left-5 z-10 hidden h-auto w-full sm:flex"
@@ -67,6 +71,7 @@ export default function CompetitionSection() {
             height={500}
             alt="competition-left"
             loading="lazy"
+            decoding="async"
           />
           <Image
             className="light-bulp absolute top-[-60%] left-0 z-10 hidden h-auto w-[35%] sm:flex"
@@ -76,6 +81,7 @@ export default function CompetitionSection() {
             height={500}
             alt="competition-left"
             loading="lazy"
+            decoding="async"
           />
           <div className="join-now-text-container absolute bottom-[-5%] left-[47.5%] z-2 h-30 w-87.5 rounded-2xl bg-[#0E54B2] p-4 px-8">
             <div className="absolute top-[-10%] left-[5%] z-[-1] flex h-full w-full items-center justify-center rounded-2xl bg-[#ED427C]">
@@ -94,6 +100,7 @@ export default function CompetitionSection() {
               height={500}
               alt="handle-card"
               loading="lazy"
+              decoding="async"
             />
             <Image
               className="competition-star absolute top-[-15%] right-[-8%] w-40"
@@ -102,6 +109,7 @@ export default function CompetitionSection() {
               height={500}
               alt="star-card"
               loading="lazy"
+              decoding="async"
             />
             <Image
               className="round-spike absolute right-[75%] bottom-[-30%] w-[40%]"
@@ -110,6 +118,7 @@ export default function CompetitionSection() {
               height={500}
               alt="round-spike"
               loading="lazy"
+              decoding="async"
             />
             <div className="image-container h-1/2 w-full bg-gray-300 bg-[url('/images/pages/home/comp.jpg')] bg-cover bg-no-repeat"></div>
             <h1 className="competition-title-text font-family-impact text-4xl text-black">
@@ -131,6 +140,7 @@ export default function CompetitionSection() {
             height={500}
             alt="round-spike"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -141,6 +151,7 @@ export default function CompetitionSection() {
         height={900}
         className="green-line absolute top-[-45%] right-[-10%] w-[40%]"
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

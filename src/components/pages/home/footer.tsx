@@ -12,6 +12,7 @@ export default function FooterSection() {
           height={1080}
           alt="footer"
           loading="lazy"
+          decoding="async"
         />
         <Image
           className="yellow-spike-right absolute -top-80 right-0 h-auto w-[15%]"
@@ -21,6 +22,7 @@ export default function FooterSection() {
           height={1080}
           alt="footer"
           loading="lazy"
+          decoding="async"
         />
       </div>
 
