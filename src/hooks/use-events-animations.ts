@@ -76,6 +76,69 @@ export const useEventsAnimation = (
   );
 };
 
+export const useEventDetailAnimation = () => {
+  useGSAP(() => {
+    const decorativeImages = [
+      ".top-left-image",
+      ".top-right-image",
+      ".pink-oval-image",
+      ".bottom-left-image",
+      ".camera-image",
+    ];
+
+    decorativeImages.forEach((selector, index) => {
+      gsap.fromTo(
+        selector,
+        { opacity: 0, scale: 0.3, rotation: -15 },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.8,
+          delay: index * 0.2,
+          ease: "back.out(1.7)",
+        },
+      );
+    });
+
+    gsap.fromTo(
+      ".event-title",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1.2, delay: 1, ease: "power3.out" },
+    );
+
+    gsap.fromTo(
+      ".event-date",
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 0.8, delay: 0.8, ease: "back.out(1.7)" },
+    );
+
+    gsap.fromTo(
+      ".description-paragraph",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, delay: 1.5, ease: "power2.out" },
+    );
+
+    gsap.fromTo(
+      ".register-button-container",
+      { opacity: 0, y: -50, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.8, delay: 2, ease: "back.out(1.7)" },
+    );
+
+    gsap.fromTo(
+      ".carousel-container",
+      { opacity: 0, y: 50, rotateX: -10 },
+      { opacity: 1, y: 0, rotateX: 0, duration: 1, delay: 0.5, ease: "power3.out" },
+    );
+
+    gsap.fromTo(
+      ".background-paper",
+      { opacity: 0, scale: 1.1 },
+      { opacity: 1, scale: 1, duration: 2, ease: "power2.out" },
+    );
+  });
+};
+
 export const useCarouselAnimation = (
   slidesRef: RefObject<HTMLDivElement | null>,
   images: { url: string }[],

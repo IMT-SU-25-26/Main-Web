@@ -19,7 +19,7 @@ interface EventsClientProps {
   events: EventData[];
 }
 
-export default function EventsPage({ events }: EventsClientProps) {
+export default function Events({ events }: EventsClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEventsAnimation(containerRef);
