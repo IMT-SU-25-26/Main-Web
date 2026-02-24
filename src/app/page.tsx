@@ -1,8 +1,8 @@
-import HomePage from "@/components/pages/home/home";
+import Home from "@/components/pages/home/home";
 import { getLatestActivities } from "@/services/activity";
 
-export default async function Home() {
+export default async function HomePage() {
   const latestActivities = await getLatestActivities();
 
-  return <HomePage latestActivities={latestActivities} />;
+  return <Home latestActivities={latestActivities} />;
 }

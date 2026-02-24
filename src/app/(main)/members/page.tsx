@@ -13,7 +13,7 @@ import Technology from "@/components/pages/members/technology";
 import { useRef, RefObject } from "react";
 import { useMembersAnimations } from "@/hooks/use-members-animations";
 
-export default function Members() {
+export default function MembersPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useMembersAnimations(containerRef as RefObject<HTMLElement>);

@@ -14,7 +14,7 @@ interface HomePageProps {
   latestActivities: Activity[];
 }
 
-export default function HomePage({ latestActivities }: HomePageProps) {
+export default function Home({ latestActivities }: HomePageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useHomeAnimations(containerRef as RefObject<HTMLElement>);
