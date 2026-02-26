@@ -1,37 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
+import { useRef } from "react";
+import { useAchievementsAnimations } from "@/hooks/use-achievements-animation";
 
 export default function AchievementsBackground() {
   const bgRef = useRef<HTMLDivElement>(null);
 
-  // Animate all left-starting cards
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate all elements with .decor-img
-      gsap.from(".decor-img", {
-        opacity: 0,
-        y: 40,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power3.out",
-      });
-
-      // Optional subtle floating animation
-      gsap.to(".decor-img:not(.no-float)", {
-        y: "+=8",
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        delay: 1.2,
-      });
-    }, bgRef);
-
-    return () => ctx.revert();
-  }, []);
+  useAchievementsAnimations(bgRef);
 
   return (
     <div ref={bgRef}>

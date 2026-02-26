@@ -104,7 +104,6 @@ export default function EventBackground({ index }: DecorativeImagesProps) {
     );
   }
 
-  // v === 9
   return (
     <>
       <Image

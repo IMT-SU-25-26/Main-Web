@@ -22,11 +22,10 @@ export const useActivitiesAnimations = (
         },
       );
 
-      // Convert to typed HTMLElement array
       const images = gsap.utils.toArray(".decor-img") as HTMLElement[];
 
       images.forEach((img, index) => {
-        const fromDirection = index % 2 === 0 ? -40 : 40; // alternate left/right
+        const fromDirection = index % 2 === 0 ? -40 : 40; 
 
         gsap.from(img, {
           opacity: 0,
