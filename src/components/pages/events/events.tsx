@@ -1,9 +1,9 @@
 "use client";
 
 import "@/styles/events.css";
-import EventCard from "@/components/pages/events/card";
-import EventHeader from "@/components/pages/events/header";
-import EventBackground from "@/components/pages/events/background";
+import Card from "@/components/pages/events/card";
+import Header from "@/components/pages/events/header";
+import Background from "@/components/pages/events/background";
 import { useRef } from "react";
 import { useEventsAnimation } from "@/hooks/use-events-animations";
 import { formatDate } from "@/utils/format-date";
@@ -32,7 +32,7 @@ export default function Events({ events }: EventsClientProps) {
         ref={containerRef}
         className="flex min-h-screen w-full flex-col items-center gap-15 overflow-hidden pb-28"
       >
-        <EventHeader />
+        <Header />
 
         {/* Card Section */}
         {events.map((event, index) => {
@@ -44,10 +44,10 @@ export default function Events({ events }: EventsClientProps) {
 
           return (
             <div key={event.id} className="section-reveal relative w-full">
-              <EventBackground index={index} />
+              <Background index={index} />
 
               <div className="relative z-10">
-                <EventCard
+                <Card
                   title={event.title.toUpperCase()}
                   date={formattedDate}
                   isreverse={isReverse}
@@ -63,9 +63,9 @@ export default function Events({ events }: EventsClientProps) {
 
         {events.length === 0 && (
           <div className="section-reveal relative w-full">
-            <EventBackground index={0} />
+            <Background index={0} />
             <div className="relative z-10">
-              <EventCard
+              <Card
                 title="COMING SOON"
                 date="COMING SOON"
                 isreverse={false}

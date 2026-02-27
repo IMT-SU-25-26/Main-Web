@@ -4,17 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-interface CardClientProps {
+interface AchievementCardClientProps {
   achievementId: string;
   className?: string;
   children: React.ReactNode;
 }
 
-export default function CardClient({
+export default function AchievementCardClient({
   achievementId,
   className,
   children,
-}: CardClientProps) {
+}: AchievementCardClientProps) {
   const [swinging, setSwinging] = useState(false);
   const pathname = usePathname();
 

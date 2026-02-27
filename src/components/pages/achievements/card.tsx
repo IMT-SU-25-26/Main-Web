@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CardClient from "./card-client";
+import Card from "./card-client";
 import { Achievement, Image as PrismaImage } from "@/generated/prisma/client";
 import { colorList } from "@/utils/color-list";
 
@@ -21,7 +21,7 @@ export default function AchievementCard({
       : achievement.description;
 
   return (
-    <CardClient achievementId={achievement.id} className={className}>
+    <Card achievementId={achievement.id} className={className}>
       <Image
         src="/images/pages/achievements/AchievementCardBG.webp"
         alt="Achievement Card Background"
@@ -65,6 +65,6 @@ export default function AchievementCard({
           {description}
         </p>
       </div>
-    </CardClient>
+    </Card>
   );
 }
