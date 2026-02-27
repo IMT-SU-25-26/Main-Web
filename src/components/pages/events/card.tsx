@@ -2,22 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface EventCardProps {
+  eventId?: string;
   title: string;
   date: string;
-  isreverse?: boolean;
   imagesrc?: string;
+  isreverse?: boolean;
   islast?: boolean;
-  eventId?: string;
   isComingSoon?: boolean;
 }
 
 export default function EventCard({
+  eventId,
   title,
   date,
-  isreverse,
   imagesrc,
+  isreverse,
   islast,
-  eventId,
   isComingSoon,
 }: EventCardProps) {
   return (
