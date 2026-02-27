@@ -80,7 +80,7 @@ export default function SearchBar<
       >
         <div className="relative w-full max-w-65 sm:max-w-sm md:max-w-md">
           <Image
-            src="/logos/SearchIcon.webp"
+            src="/images/layout/search-icon.webp"
             alt="Search Icon"
             width={18}
             height={18}

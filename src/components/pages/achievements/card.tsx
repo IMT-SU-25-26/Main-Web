@@ -40,9 +40,12 @@ export default function AchievementCard({
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gray-200">
-            <span className="text-sm text-gray-400">No Image</span>
-          </div>
+          <Image
+            src="/images/layout/placeholder.png"
+            alt="No Image"
+            fill
+            className="object-cover"
+          />
         )}
         <div
           className="absolute bottom-0 left-0 h-2 w-full"

@@ -25,7 +25,7 @@ export default function AchievementCardClient({
         setSwinging(true);
         setTimeout(() => setSwinging(false), 700);
       }}
-      className={`relative h-100 w-80 cursor-pointer overflow-hidden duration-300 drop-shadow-md hover:origin-top hover:rotate-[1.3deg] active:scale-100 active:brightness-90 ${
+      className={`relative block h-100 w-80 cursor-pointer overflow-hidden drop-shadow-md duration-300 hover:origin-top hover:rotate-[1.3deg] active:scale-100 active:brightness-90 ${
         swinging ? "swing-effect" : ""
       } ${className}`}
     >
