@@ -10,7 +10,8 @@ export const useEventsAnimation = (
 ) => {
   useGSAP(
     () => {
-      gsap.defaults({ force3D: true, overwrite: "auto" });
+      gsap.config({ force3D: true });
+      gsap.defaults({ overwrite: "auto" });
 
       // Section Reveal Animation
       gsap.utils

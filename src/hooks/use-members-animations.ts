@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 export const useMembersAnimations = (containerRef: RefObject<HTMLElement>) => {
   useGSAP(
     () => {
-      gsap.defaults({ force3D: true, overwrite: "auto" });
+      gsap.config({ force3D: true });
+      gsap.defaults({ overwrite: "auto" });
 
       // Section Reveal
       gsap.utils.toArray<HTMLElement>(".section-reveal").forEach((section) => {

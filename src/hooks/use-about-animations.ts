@@ -12,7 +12,8 @@ const mm = gsap.matchMedia();
 export const useAboutAnimations = (containerRef: RefObject<HTMLElement>) => {
   useGSAP(
     () => {
-      gsap.defaults({ force3D: true, overwrite: "auto" });
+      gsap.config({ force3D: true });
+      gsap.defaults({ overwrite: "auto" });
 
       // Desktop Animations
       mm.add("(min-width: 640px), all", () => {

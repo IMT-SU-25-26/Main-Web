@@ -4,12 +4,13 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollDefaults } from "@/utils/scroll-trigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); 
 
 export const useHomeAnimations = (containerRef: RefObject<HTMLElement>) => {
   useGSAP(
     () => {
-      gsap.defaults({ force3D: true, overwrite: "auto" });
+      gsap.config({ force3D: true });
+      gsap.defaults({ overwrite: "auto" });
 
       // Hero Elements
       gsap.set(
