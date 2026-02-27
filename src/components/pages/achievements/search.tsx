@@ -11,12 +11,12 @@ type AchievementWithImages = Achievement & { images?: PrismaImage[] };
 
 interface AchievementsSearchProps {
   achievements: AchievementWithImages[];
-  featuredAchievements?: AchievementWithImages[];
+  featuredAchievement?: AchievementWithImages | null;
 }
 
 export default function AchievementsSearch({
   achievements,
-  featuredAchievements,
+  featuredAchievement,
 }: AchievementsSearchProps) {
   const searchRef = useRef<HTMLDivElement>(null);
 
@@ -27,17 +27,14 @@ export default function AchievementsSearch({
       ref={searchRef}
       className="z-10 mt-8 flex w-full flex-col items-center pt-40 md:max-w-[70vw] md:px-8 lg:px-32"
     >
-      {/* Featured Achievements */}
-      {featuredAchievements && featuredAchievements.length > 0 && (
+      {/* Featured Achievement */}
+      {featuredAchievement && (
         <div className="mb-4 flex w-full flex-col gap-4">
-          {featuredAchievements.map((achievement, index) => (
-            <AchievementFeatured
-              key={achievement.id}
-              achievement={achievement}
-              index={index}
-              className={index % 2 === 0 ? "start-left" : "start-right"}
-            />
-          ))}
+          <AchievementFeatured
+            achievement={featuredAchievement}
+            index={0}
+            className="start-left"
+          />
         </div>
       )}
 

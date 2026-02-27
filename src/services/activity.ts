@@ -10,10 +10,10 @@ export async function getLatestActivities(limit: number = 3) {
     orderBy: {
       createdAt: "desc",
     },
-    take: limit,
     include: {
       images: true,
     },
+    take: limit,
   });
 
   return activities.map((activity) => ({

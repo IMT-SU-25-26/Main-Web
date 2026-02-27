@@ -23,6 +23,27 @@ export async function getAchievementById(achievementId: string) {
   });
 }
 
+export async function getFeaturedAchievement(limit: number = 1) {
+  return await prisma.achievement.findFirst({
+    where: { featured: true },
+    orderBy: { createdAt: "desc" },
+    include: {
+      images: true,
+    },
+    take: limit,
+  });
+}
+
+export async function getNonFeaturedAchievements() {
+  return await prisma.achievement.findMany({
+    where: { featured: false },
+    orderBy: { createdAt: "desc" },
+    include: {
+      images: true,
+    },
+  });
+}
+
 export async function createAchievement(
   data: z.infer<typeof AchievementSchema>,
 ) {
