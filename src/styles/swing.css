@@ -1,0 +1,27 @@
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-0.25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.swing-hover:hover {
+  animation: swing 0.7s ease-in-out;
+  transform-origin: top center;
+}
+
+.swing-effect {
+  animation: swing 0.7s ease-in-out;
+  transform-origin: top center;
+}

@@ -80,25 +80,6 @@ body {
   font-display: swap;
 }
 
-/* KeyFrames */
-@keyframes swing {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-1.5deg);
-  }
-  50% {
-    transform: rotate(1deg);
-  }
-  75% {
-    transform: rotate(-0.25deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 /* Scrollbar */
 .thin-scroll::-webkit-scrollbar {
   height: 2px;

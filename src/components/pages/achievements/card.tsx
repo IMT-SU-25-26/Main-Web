@@ -1,3 +1,4 @@
+import "@/styles/swing.css";
 import Image from "next/image";
 import Card from "./card-client";
 import { Achievement, Image as PrismaImage } from "@/generated/prisma/client";
@@ -31,7 +32,7 @@ export default function AchievementCard({
       />
 
       {/* Achievement Image */}
-      <div className="absolute top-12 left-7.5 h-35 w-65 bg-gray-300">
+      <div className="absolute top-17 left-7.5 h-35 w-65 bg-gray-300">
         {achievement.images?.[0]?.url ? (
           <Image
             src={achievement.images[0].url}
@@ -54,7 +55,7 @@ export default function AchievementCard({
       </div>
 
       {/* Text Content */}
-      <div className="absolute top-50 right-7.5 left-7.5">
+      <div className="absolute top-55 right-7.5 left-7.5">
         <h3 className="text-xl font-extrabold text-black">
           {achievement.title}
         </h3>
