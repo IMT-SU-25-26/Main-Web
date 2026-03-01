@@ -5,10 +5,8 @@ import Featured from "./featured";
 import Pagination from "@/components/layout/pagination";
 import SearchBar from "@/components/ui/search-bar";
 import { useRef, useState } from "react";
-import { Achievement, Image as PrismaImage } from "@/generated/prisma/client";
+import { AchievementWithImages } from "@/types/db/achievement";
 import { useAchievementsCardsAnimations } from "@/hooks/use-achievements-animation";
-
-type AchievementWithImages = Achievement & { images?: PrismaImage[] };
 
 interface AchievementsSearchProps {
   achievements: AchievementWithImages[];

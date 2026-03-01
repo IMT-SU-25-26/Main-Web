@@ -36,5 +36,3 @@ export const UserSchema = z.object({
     .optional(),
   role: z.enum(Role, "Role is required"),
 });
-
-export type User = z.infer<typeof UserSchema>;

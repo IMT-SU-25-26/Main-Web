@@ -7,5 +7,3 @@ export const ApplicationSchema = z.object({
   competitionId: z.string().min(1, "Competition ID is required").optional(),
   status: z.enum(Status, "Status is required"),
 });
-
-export type Application = z.infer<typeof ApplicationSchema>;

@@ -7,8 +7,8 @@ import Competition from "./competition";
 import Services from "./services";
 import Footer from "./footer";
 import { useRef, RefObject } from "react";
+import { Activity } from "@/generated/prisma/client";
 import { useHomeAnimations } from "@/hooks/use-home-animations";
-import { Activity } from "@/types/db/activity";
 
 interface HomePageProps {
   latestActivities: Activity[];

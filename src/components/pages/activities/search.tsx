@@ -2,19 +2,25 @@
 
 import ActivityCard from "./card";
 import SearchBar from "@/components/ui/search-bar";
-import { Activity, Category } from "@/generated/prisma/client";
+import { useRef } from "react";
+import { Category } from "@/generated/prisma/enums";
+import { useActivitiesAnimations } from "@/hooks/use-activities-animations";
+import { ActivityWithImages } from "@/types/db/activity";
 
 interface ActivitiesSearchProps {
-  activities: Activity[];
+  activities: ActivityWithImages[];
   categories: Category[];
-  confirmApply?: (onConfirm: () => Promise<void>) => void;
 }
 
 export default function ActivitiesSearch({
   activities,
-  confirmApply,
   categories,
 }: ActivitiesSearchProps) {
+  const bgRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  useActivitiesAnimations(bgRef, searchRef);
+
   // Map Categories to SearchBar Format
   const categoryFilters = categories.map((category, index) => ({
     id: index,
@@ -22,7 +28,7 @@ export default function ActivitiesSearch({
   }));
 
   return (
-    <div className="z-10 w-full px-4 md:px-8 lg:px-32">
+    <div ref={searchRef} className="z-10 w-full px-4 md:px-8 lg:px-32">
       <SearchBar
         items={activities}
         className="start-bottom"
@@ -38,7 +44,6 @@ export default function ActivitiesSearch({
                   <ActivityCard
                     activity={activity}
                     index={index}
-                    confirmApply={confirmApply}
                     category={activity.category}
                   />
                 </div>

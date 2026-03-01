@@ -9,5 +9,3 @@ export const EventSchema = z.object({
   }),
   images: z.array(ImageSchema).optional(),
 });
-
-export type Event = z.infer<typeof EventSchema>;

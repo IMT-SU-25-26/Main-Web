@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { ImageSchema } from "./image";
+import { Achievement } from "@/generated/prisma/client";
+import { Image } from "@/generated/prisma/client";
 
 export const AchievementSchema = z.object({
   title: z
@@ -15,4 +17,4 @@ export const AchievementSchema = z.object({
   images: z.array(ImageSchema).optional(),
 });
 
-export type Achievement = z.infer<typeof AchievementSchema>;
+export type AchievementWithImages = Achievement & { images?: Image[] };

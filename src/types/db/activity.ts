@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { ImageSchema } from "./image";
+import { Activity } from "@/generated/prisma/client";
+import { Image } from "@/generated/prisma/client";
 import { Category } from "@/generated/prisma/enums";
 
 export const ActivitySchema = z.object({
@@ -21,4 +23,4 @@ export const ActivitySchema = z.object({
   images: z.array(ImageSchema).optional(),
 });
 
-export type Activity = z.infer<typeof ActivitySchema>;
+export type ActivityWithImages = Activity & { images?: Image[] };
