@@ -1,4 +1,4 @@
-import Events from "@/components/pages/events/events";
+import Events from "@/components/pages/events/wrapper";
 import { getAllEvents } from "@/services/event";
 
 export default async function EventsPage() {

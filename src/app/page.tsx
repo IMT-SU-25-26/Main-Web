@@ -1,4 +1,4 @@
-import Home from "@/components/pages/home/home";
+import Home from "@/components/pages/home/wrapper";
 import { getLatestActivities } from "@/services/activity";
 
 export default async function HomePage() {

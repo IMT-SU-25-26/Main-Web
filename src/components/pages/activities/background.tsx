@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
 
-const ActivityBackground = () => {
+export default function ActivityBackground () {
   return (
     <>
       {/* Pin */}
@@ -77,4 +75,3 @@ const ActivityBackground = () => {
   );
 };
 
-export default ActivityBackground;
