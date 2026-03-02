@@ -3,20 +3,17 @@
 import Image from "next/image";
 import Carousel from "@/components/pages/events/carousel";
 import { useEventDetailAnimation } from "@/hooks/use-events-animations";
+import { EventWithImages } from "@/types/db/event";
 import { formatDate } from "@/utils/format-date";
 
 interface EventDetailProps {
-  event: {
-    id: string;
-    title: string;
-    description: string;
-    startDate: Date;
-  };
-  images: { url: string }[];
+  event: EventWithImages | null;
 }
 
-export default function EventDetail({ event, images }: EventDetailProps) {
+export default function EventDetail({ event }: EventDetailProps) {
   useEventDetailAnimation();
+
+  if (!event) return null;
 
   const formattedDate = formatDate(event, "startDate");
 
@@ -63,7 +60,7 @@ export default function EventDetail({ event, images }: EventDetailProps) {
 
         {/* Carousel */}
         <div className="carousel-container relative mt-12 mb-8 w-full -rotate-1">
-          <Carousel images={images} />
+          <Carousel images={event.images || []} />
         </div>
 
         {/* Event Detail Content */}

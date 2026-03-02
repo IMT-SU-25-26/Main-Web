@@ -6,17 +6,11 @@ import Header from "@/components/pages/events/header";
 import Background from "@/components/pages/events/background";
 import { useRef } from "react";
 import { useEventsAnimation } from "@/hooks/use-events-animations";
+import { EventWithImages } from "@/types/db/event";
 import { formatDate } from "@/utils/format-date";
 
-interface EventData {
-  id: string;
-  title: string;
-  startDate: Date;
-  images: { url: string }[];
-}
-
 interface EventsClientProps {
-  events: EventData[];
+  events: EventWithImages[];
 }
 
 export default function Events({ events }: EventsClientProps) {
@@ -52,7 +46,7 @@ export default function Events({ events }: EventsClientProps) {
                   date={formattedDate}
                   isreverse={isReverse}
                   eventId={event.id}
-                  imagesrc={event.images[0]?.url}
+                  imagesrc={event.images?.[0]?.url || ""}
                   islast={isLast}
                   isComingSoon={isComingSoon}
                 />

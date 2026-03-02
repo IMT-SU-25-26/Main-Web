@@ -1,6 +1,5 @@
 import EventDetail from "@/components/pages/events/event-detail";
-import { notFound } from "next/navigation";
-import { getEventById, getEventImages } from "@/services/event";
+import { getEventById } from "@/services/event";
 
 export default async function EventDetailPage({
   params,
@@ -9,12 +8,7 @@ export default async function EventDetailPage({
 }) {
   const { eventId } = await params;
 
-  const [event, images] = await Promise.all([
-    getEventById(eventId),
-    getEventImages(eventId),
-  ]);
+  const event = await getEventById(eventId);
 
-  if (!event) notFound();
-
-  return <EventDetail event={event} images={images} />;
+  return <EventDetail event={event} />;
 }

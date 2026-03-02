@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { ImageSchema } from "./image";
+import { Event } from "@/generated/prisma/client";
+import { Image } from "@/generated/prisma/client";
 
 export const EventSchema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -9,3 +11,5 @@ export const EventSchema = z.object({
   }),
   images: z.array(ImageSchema).optional(),
 });
+
+export type EventWithImages = Event & { images?: Image[] };

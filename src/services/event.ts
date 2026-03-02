@@ -27,14 +27,8 @@ export async function getAllEvents() {
 export async function getEventById(eventId: string) {
   return await prisma.event.findUnique({
     where: { id: eventId },
-  });
-}
-
-export async function getEventImages(eventId: string) {
-  return await prisma.image.findMany({
-    where: { eventId },
-    select: {
-      url: true,
+    include: {
+      images: true,
     },
   });
 }

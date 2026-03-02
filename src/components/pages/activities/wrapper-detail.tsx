@@ -1,6 +1,6 @@
 "use client";
 
-import FrameImage from "@/components/achievement/FrameImage";
+import Frame from "@/components/ui/image-frame";
 import { Activity } from "@prisma/client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
