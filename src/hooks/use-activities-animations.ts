@@ -3,8 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export const useActivitiesAnimations = (
-  bgRef: RefObject<HTMLDivElement | null>,
-  searchRef: RefObject<HTMLDivElement | null>,
+  containerRef: RefObject<HTMLDivElement | null>,
 ) => {
   useGSAP(
     () => {
@@ -15,7 +14,6 @@ export const useActivitiesAnimations = (
           opacity: 1,
           y: 0,
           duration: 0.8,
-          delay: 0,
           ease: "power1.out",
           stagger: 0.1,
           clearProps: "transform",
@@ -25,7 +23,7 @@ export const useActivitiesAnimations = (
       const images = gsap.utils.toArray(".decor-img") as HTMLElement[];
 
       images.forEach((img, index) => {
-        const fromDirection = index % 2 === 0 ? -40 : 40; 
+        const fromDirection = index % 2 === 0 ? -40 : 40;
 
         gsap.from(img, {
           opacity: 0,
@@ -48,25 +46,6 @@ export const useActivitiesAnimations = (
         }
       });
     },
-    { scope: bgRef },
-  );
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        ".start-bottom",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          delay: 0,
-          ease: "power1.out",
-          stagger: 0.1,
-          clearProps: "transform",
-        },
-      );
-    },
-    { scope: searchRef },
+    { scope: containerRef },
   );
 };

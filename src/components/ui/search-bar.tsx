@@ -100,7 +100,7 @@ export default function SearchBar<
 
       {/* Category Filter Buttons */}
       {categories && (
-        <div className="my-2 flex flex-wrap justify-center gap-2">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {categories.map((cat) => {
             const isActive = selectedCategories.includes(cat.id);
             return (

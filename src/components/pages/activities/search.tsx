@@ -2,9 +2,7 @@
 
 import ActivityCard from "./card";
 import SearchBar from "@/components/ui/search-bar";
-import { useRef } from "react";
 import { Category } from "@/generated/prisma/enums";
-import { useActivitiesAnimations } from "@/hooks/use-activities-animations";
 import { ActivityWithMeta } from "@/types/db/activity";
 
 interface ActivitiesSearchProps {
@@ -20,10 +18,6 @@ export default function ActivitiesSearch({
   isLoggedIn,
   userId,
 }: ActivitiesSearchProps) {
-  const bgRef = useRef<HTMLDivElement>(null);
-  const searchRef = useRef<HTMLDivElement>(null);
-
-  useActivitiesAnimations(bgRef, searchRef);
 
   // Map Categories to SearchBar Format
   const categoryFilters = categories.map((category, index) => ({
@@ -32,7 +26,7 @@ export default function ActivitiesSearch({
   }));
 
   return (
-    <div ref={searchRef} className="z-10 w-full px-4 md:px-8 lg:px-32">
+    <div className="z-10 w-full px-4 md:px-8 lg:px-32">
       <SearchBar
         items={activities}
         className="start-bottom"

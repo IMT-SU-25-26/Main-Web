@@ -1,11 +1,11 @@
 import Image from "next/image";
 import CardClient from "./card-client";
 import ApplyButton from "@/components/ui/apply-button";
-import { Activity, Image as PrismaImage } from "@/generated/prisma/client";
 import { colorList } from "@/utils/color-list";
+import { ActivityWithImages } from "@/types/db/activity";
 
 interface ActivityCardProps {
-  activity: Activity & { images?: PrismaImage[] };
+  activity: ActivityWithImages;
   index: number;
   className?: string;
   category: string;
@@ -34,13 +34,18 @@ export default function ActivityCard({
     <CardClient activityId={activity.id} className={className}>
       {/* Paper Clip */}
       <div className="absolute -top-6 left-1/2 z-10 -translate-x-1/2">
-        <Image src="/activities/tape.svg" alt="tape" width={80} height={80} />
+        <Image
+          src="/images/pages/activities/tape.svg"
+          alt="tape"
+          width={80}
+          height={80}
+        />
       </div>
 
       <div className="mb-2 h-50 w-full overflow-hidden rounded-lg sm:h-55">
         {/* Activity Image */}
         <Image
-          src={activity.images?.[0]?.url || "/placeholder/placeholder.png"}
+          src={activity.images?.[0]?.url || "/images/layout/placeholder.png"}
           alt={activity.title}
           width={360}
           height={144}

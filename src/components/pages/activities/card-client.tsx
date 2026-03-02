@@ -1,6 +1,6 @@
 "use client";
 
-import "@/styles/activity.css";
+import "@/styles/swing.css";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";

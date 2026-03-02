@@ -1,11 +1,11 @@
 import Activities from "@/components/pages/activities/wrapper";
 import { Category } from "@/generated/prisma/enums";
+import { getSession } from "@/lib/auth-server";
 import { getAllActivities } from "@/services/activity";
 import {
   getApprovedApplicationsCount,
   getApplicationStatus,
 } from "@/services/application";
-import { getSession } from "@/lib/auth-server";
 import { ActivityWithMeta } from "@/types/db/activity";
 
 export default async function ActivitiesPage() {
