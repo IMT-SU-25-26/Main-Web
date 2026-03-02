@@ -22,39 +22,39 @@ export default function EventDetail({ event, images }: EventDetailProps) {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="h-[5vh] bg-[#F1EEE6]"></div>
-      <div className="background-paper relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#F1EEE6] bg-[url('/backgrounds/background-paper.png')] bg-contain bg-center pt-8">
+      <div className="h-[6vh] bg-[#F1EEE6]"></div>
+      <div className="background-paper relative flex min-h-screen w-full flex-col items-center overflow-hidden">
         {/* Decorative Elements */}
         <Image
-          src="/eventsdetails/top-left.webp"
+          src="/images/pages/events/top-left.webp"
           alt="top left"
           width={700}
           height={475}
           className="top-left-image absolute -top-8 left-0 w-48 opacity-80 sm:-top-12 sm:w-72 md:-top-16 md:w-100 lg:w-100"
         />
         <Image
-          src="/eventsdetails/top-right.svg"
+          src="/images/pages/events/top-right.svg"
           alt="top right"
           width={700}
           height={475}
           className="top-right-image absolute top-0 right-0 w-80 opacity-70 sm:w-100 md:w-120 lg:w-140"
         />
         <Image
-          src="/events/pink-oval.svg"
+          src="/images/pages/events/pink-oval.svg"
           alt="pink oval"
           width={700}
           height={475}
           className="pink-oval-image absolute -bottom-40 -left-28 w-80 opacity-60 sm:-bottom-52 sm:-left-20 sm:w-100 md:-left-28 md:w-120 lg:-bottom-72 lg:w-140"
         />
         <Image
-          src="/eventsdetails/bottom-left-2.svg"
+          src="/images/pages/events/bottom-left-2.svg"
           alt="bottom left"
           width={700}
           height={475}
           className="bottom-left-image absolute -bottom-12 left-0 z-1 w-48 opacity-70 sm:-bottom-16 sm:w-72 md:-bottom-20 md:w-100 lg:w-100"
         />
         <Image
-          src="/events/camera.webp"
+          src="/images/pages/events/camera.webp"
           alt="camera"
           width={200}
           height={200}

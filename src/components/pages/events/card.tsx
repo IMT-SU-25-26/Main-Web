@@ -103,7 +103,7 @@ export default function EventCard({
                 </div>
               </div>
             ) : (
-              <Link href={`/images/pages/events/${eventId}`}>
+              <Link href={`/events/${eventId}`}>
                 <div className="viewmore-button absolute -bottom-10 left-1/2 z-2 h-12.5 w-45 -translate-x-1/2 cursor-pointer rounded-2xl bg-[#0E54B2] p-2 px-4 transition-transform hover:scale-105 md:-bottom-14 md:h-15 md:w-60 md:p-4 md:px-8">
                   <div className="absolute top-[-10%] left-[5%] z-[-1] flex h-full w-full items-center justify-center rounded-2xl bg-[#ED427C]">
                     <h1 className="viewmore-button-text font-family-impact text-center text-xl text-white md:text-3xl">
