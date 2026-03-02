@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ActivityBackground () {
+export default function ActivitiesBackground () {
   return (
     <>
       {/* Pin */}
@@ -74,4 +74,3 @@ export default function ActivityBackground () {
     </>
   );
 };
-

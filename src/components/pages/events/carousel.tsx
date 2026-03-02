@@ -45,7 +45,7 @@ export default function Carousel({ images }: CarouselProps) {
           >
             <Image
               src={slide.url}
-              alt={`Event image ${(index % images.length) + 1}`}
+              alt={`Event Image ${(index % images.length) + 1}`}
               fill
               className="rounded-xl object-cover"
               sizes="400px"
