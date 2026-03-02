@@ -18,3 +18,20 @@ export function formatDate<T extends object, K extends keyof T>(
     })
     .toUpperCase();
 }
+
+export function formatDateTime(value: string | number | Date): string {
+  if (value === null || value === undefined) return "";
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return "";
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+}

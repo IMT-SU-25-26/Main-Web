@@ -3,6 +3,7 @@ import CardClient from "./card-client";
 import ApplyButton from "@/components/ui/apply-button";
 import { colorList } from "@/utils/color-list";
 import { ActivityWithImages } from "@/types/db/activity";
+import { formatDateTime } from "@/utils/format-date";
 
 interface ActivityCardProps {
   activity: ActivityWithImages;
@@ -96,14 +97,7 @@ export default function ActivityCard({
               />
             </svg>
             <p className="text-[0.8rem] text-gray-600">
-              {new Date(activity.startDate).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-                hour12: true,
-              })}
+              {formatDateTime(activity.startDate)}
             </p>
           </div>
 
