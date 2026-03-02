@@ -1,10 +1,9 @@
 import Background from "@/components/pages/achievements/background";
-
+import Achievements from "@/components/pages/achievements/search";
 import {
   getFeaturedAchievement,
   getNonFeaturedAchievements,
 } from "@/services/achievement";
-import Achievements from "@/components/pages/achievements/search";
 
 export default async function AchievementsPage() {
   const featuredAchievement = await getFeaturedAchievement();

@@ -5,16 +5,20 @@ import SearchBar from "@/components/ui/search-bar";
 import { useRef } from "react";
 import { Category } from "@/generated/prisma/enums";
 import { useActivitiesAnimations } from "@/hooks/use-activities-animations";
-import { ActivityWithImages } from "@/types/db/activity";
+import { ActivityWithMeta } from "@/types/db/activity";
 
 interface ActivitiesSearchProps {
-  activities: ActivityWithImages[];
+  activities: ActivityWithMeta[];
   categories: Category[];
+  isLoggedIn: boolean;
+  userId: string | undefined;
 }
 
 export default function ActivitiesSearch({
   activities,
   categories,
+  isLoggedIn,
+  userId,
 }: ActivitiesSearchProps) {
   const bgRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -45,6 +49,10 @@ export default function ActivitiesSearch({
                     activity={activity}
                     index={index}
                     category={activity.category}
+                    approvedCount={activity.approvedCount}
+                    applicationStatus={activity.applicationStatus}
+                    isLoggedIn={isLoggedIn}
+                    userId={userId}
                   />
                 </div>
               ))}

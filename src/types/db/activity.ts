@@ -24,3 +24,8 @@ export const ActivitySchema = z.object({
 });
 
 export type ActivityWithImages = Activity & { images?: Image[] };
+
+export type ActivityWithMeta = ActivityWithImages & {
+  approvedCount: number;
+  applicationStatus: string | undefined;
+};

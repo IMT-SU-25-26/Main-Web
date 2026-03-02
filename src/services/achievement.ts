@@ -5,23 +5,6 @@ import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { AchievementSchema } from "@/types/db/achievement";
 
-export async function getAllAchievements() {
-  return await prisma.achievement.findMany({
-    orderBy: {
-      createdAt: "asc",
-    },
-    select: {
-      id: true,
-      title: true,
-    },
-  });
-}
-
-export async function getAchievementById(achievementId: string) {
-  return await prisma.achievement.findUnique({
-    where: { id: achievementId },
-  });
-}
 
 export async function getFeaturedAchievement(limit: number = 1) {
   return await prisma.achievement.findFirst({
@@ -41,6 +24,12 @@ export async function getNonFeaturedAchievements() {
     include: {
       images: true,
     },
+  });
+}
+
+export async function getAchievementById(achievementId: string) {
+  return await prisma.achievement.findUnique({
+    where: { id: achievementId },
   });
 }
 

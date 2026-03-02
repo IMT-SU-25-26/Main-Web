@@ -2,11 +2,6 @@ import Image from "next/image";
 import CardClient from "./card-client";
 import ApplyButton from "@/components/ui/apply-button";
 import { Activity, Image as PrismaImage } from "@/generated/prisma/client";
-import { getSession } from "@/lib/auth-server";
-import {
-  getApprovedApplicationsCount,
-  getApplicationStatus,
-} from "@/services/application";
 import { colorList } from "@/utils/color-list";
 
 interface ActivityCardProps {
@@ -14,28 +9,26 @@ interface ActivityCardProps {
   index: number;
   className?: string;
   category: string;
+  approvedCount: number;
+  applicationStatus: string | undefined;
+  isLoggedIn: boolean;
+  userId: string | undefined;
 }
 
-export default async function ActivityCard({
+export default function ActivityCard({
   activity,
   index,
   className,
   category,
+  approvedCount,
+  applicationStatus,
+  isLoggedIn,
+  userId,
 }: ActivityCardProps) {
   const accentColor = colorList[index % colorList.length];
   const description = activity.description;
   const trimmedDescription =
     description.length > 75 ? description.slice(0, 75) + "..." : description;
-
-  const session = await getSession();
-  const userId = session?.user?.id;
-
-  const [approvedCount, applicationStatus] = await Promise.all([
-    getApprovedApplicationsCount(activity.id),
-    userId
-      ? getApplicationStatus(activity.id, userId)
-      : Promise.resolve(undefined),
-  ]);
 
   return (
     <CardClient activityId={activity.id} className={className}>
@@ -153,7 +146,7 @@ export default async function ActivityCard({
         quota={activity.quota}
         approvedCount={approvedCount}
         initialApplicationStatus={applicationStatus}
-        isLoggedIn={!!session}
+        isLoggedIn={isLoggedIn}
         userId={userId}
       >
         Register
