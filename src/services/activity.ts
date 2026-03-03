@@ -1,8 +1,8 @@
 "use server";
 
-import { prisma } from "@/lib/prisma";
-import { z } from "zod";
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
+import { prisma } from "@/lib/prisma";
 import { ActivitySchema } from "@/types/db/activity";
 
 export async function getLatestActivities(limit: number = 3) {

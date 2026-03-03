@@ -1,8 +1,8 @@
 "use server";
 
-import { prisma } from "@/lib/prisma";
-import { z } from "zod";
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
+import { prisma } from "@/lib/prisma";
 import { EventSchema } from "@/types/db/event";
 
 export async function getAllEvents() {
